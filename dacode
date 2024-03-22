@@ -47,4 +47,4 @@ plt.ylabel("Duration (min)")
 plt.show()
 
 # Are we certain that movies are getting shorter?
-answer = "maybe"
+#answer = "maybe"
