@@ -15,10 +15,15 @@ netflix_subset = netflix_df[netflix_df["type"] == "Movie"]
 
 # Select only the columns of interest
 netflix_movies_nat = netflix_subset[["country", "release_year"]]
+netflix_movies_year=  netflix_subset[["release_year"]]
+#Group movies by country and count them
+movies_per_c = netflix_movies_nat.groupby(["country"]).value_counts().reset_index(name="count")
 
-#Group movies per release_year and nationality
-#grouped_movies_cy = netflix_movies_nat.groupby(["country","release_year"]).agg(['count'])
-grouped_movies_c = netflix_movies_nat.groupby(["country"]).count()
-print(grouped_movies_c)
+#List South American countries and select movies released by year and country
+sa_countries=["Argentina", "Bolivia","Brazil","Chile","Colombia","Ecuador","Guyana","Paraguay","Peru","Suriname","Uruguay","Venezuela"]
+sa_movies_per_y = movies_per_c[movies_per_c["country"].isin(sa_countries)]
 
+#Calculate max number of movies released each year and sort by county and country
+
+print(sa_movies_per_y)
 #Graph release_year agnst nationality with scatterplot: use color for nationality and size for n of movies.
