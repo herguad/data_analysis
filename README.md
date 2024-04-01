@@ -8,3 +8,12 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 ###Has Netflix been expanding the range of nationalities of movies in their library?
 
 ##South American movies
+###Are the movies included in Netflix library evenly distributed by nationality?
+- Find out the total number of movies from South American countries included in Netflix library.
+- Visualize the distribution and find the most and least represented nationalities in Netflix library.
+
+###Are there changes in the distribution of nationalities of SouthA movies in Netflix in time?
+
+
+
+
