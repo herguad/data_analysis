@@ -18,26 +18,24 @@ netflix_movies_nat = netflix_subset[["country", "release_year"]]
 #Group movies per release_year and nationality
 movies_per_c = netflix_movies_nat.groupby(["country"]).value_counts().reset_index(name="count")
 
+#print(movies_per_c)
+
 #List South American countries and select movies released by year and country
 sa_countries=["Argentina", "Bolivia","Brazil","Chile","Colombia","Ecuador","Guyana","Paraguay","Peru","Suriname","Uruguay","Venezuela"]
 sa_movies_per_y = movies_per_c[movies_per_c["country"].isin(sa_countries)]
 
-#Calculate total releases per country and sort
+#Calculate total releases per country and sort by country
 total_releases_per_c= sa_movies_per_y.groupby(["release_year","country"])[["release_year","count"]].sum()
 total_r_p_country= pd.DataFrame(total_releases_per_c)
 
-#Where there years where no SouthAmerican movies were released?
-all_years=range(1985,2020)
-years_SA_movies=sa_movies_per_y["release_year"].isin(all_years)
-years_no_sa_movies=years_SA_movies[years_SA_movies==False]
-#print(years_no_sa_movies)
+#print(sa_movies_per_y)
 
-#Calculate max number of movies released each year and sort by count and country
-max_releases_per_y=sa_movies_per_y.groupby("release_year")[["country","count"]].max()
+#Calculate year where each country released max number of movies 
+max_releases_per_y=sa_movies_per_y.groupby("country")[["release_year","count"]].max()
 
-movies_years=list(sa_movies_per_y["release_year"])
+#print(max_releases_per_y)
 
-print(max_releases_per_y)
 #Graph total_releases_per_c from 1985 to 2020
-#sns.scatterplot(data=total_r_p_country, x="release_year", y="count", hue="country", palette="deep",markers= time)
-#plt.show()
+
+sns.scatterplot(data=max_releases_per_y, x="release_year", y="count", hue="country", palette="deep")
+plt.show()
