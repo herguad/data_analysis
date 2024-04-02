@@ -36,6 +36,14 @@ max_releases_per_y=sa_movies_per_y.groupby("country")[["release_year","count"]].
 #print(max_releases_per_y)
 
 #Graph total_releases_per_c from 1985 to 2020
+#Comparing plots
+#Histogram:too much overlap
+sns.histplot(data=total_r_p_country, x="release_year", binrange=(1980,2025), hue="country", element="step")
+plt.ylim(0,4)
+plt.show()
 
-sns.scatterplot(data=max_releases_per_y, x="release_year", y="count", hue="country", palette="deep")
+#Scatterplot: still unclear, too many colors
+sns.scatterplot(data=total_r_p_country, x="release_year", y="count", hue="country", palette= "deep")
+plt.xlim(1980,2025)
+plt.ylim(0,12)
 plt.show()
