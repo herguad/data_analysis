@@ -21,3 +21,8 @@ years_movies=netflix_movies_nat["release_year"].isin(all_years)
 no_movies_y=years_movies[years_movies==False]
 
 print(netflix_movies_nat)
+
+#Movies with NaN countries
+# Subset the DataFrame for type "country". Filter NaNs and eliminate duplicates.
+netflix_subset_c = netflix_df["country"]
+country_nan=netflix_subset_c[netflix_subset_c.isnull()]
