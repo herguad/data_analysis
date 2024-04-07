@@ -13,7 +13,7 @@ netflix_df = pd.read_csv("netflix_data.csv")
 netflix_subset = netflix_df[netflix_df["type"] == "Movie"]
 
 # Select only the columns of interest
-netflix_movies_nat = netflix_subset[["country", "release_year"]]
+netflix_movies_nat = netflix_subset[["country", "release_year"]] #-->Change 'release_year' for 'date_added' from here downwards
 
 #Group movies per release_year and nationality
 movies_per_c = netflix_movies_nat.groupby(["country"]).value_counts().reset_index(name="count")
