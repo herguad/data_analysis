@@ -18,7 +18,9 @@ netflix_countries_filtered=pd.DataFrame(netflix_subset_c_noNaN)
 netflix_nat_year=netflix_countries_filtered.merge(netflix_subset, on="country",how="left")
 movies_col_select=netflix_nat_year[['country','date_added','genre']]
 movies_col_select['date_added']=pd.to_datetime(movies_col_select['date_added'])
-print(movies_col_select['date_added'][1])
+movies_col_select['date_added']=movies_col_select['date_added'].dt.year  #Ignore warning but read: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+movies_grouped_sum=movies_col_select.groupby("country").value_counts()
+print(movies_grouped_sum)
 #Distribution per year and continent
 
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
