@@ -13,11 +13,8 @@ netflix_df=pd.read_csv('netflix_data.csv')
 netflix_df = pd.read_csv("netflix_data.csv")
 
 # Subset the DataFrame for type "country". Filter NaNs and eliminate duplicates.
-netflix_subset_c = netflix_df["country"]
-country_nan=netflix_subset_c.isna()
-non_nan_country=pd.DataFrame(country_nan==False)
-filter_countries_nan=netflix_subset_c[...]
-print(filter_countries_nan)
+netflix_subset_c_noNaN = netflix_df["country"].dropna()
+
 #Distribution per year and continent
 
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
