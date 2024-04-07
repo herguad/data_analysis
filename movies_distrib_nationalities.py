@@ -16,7 +16,9 @@ netflix_subset = netflix_df[netflix_df["type"] == "Movie"]
 netflix_subset_c_noNaN = netflix_subset["country"].dropna()
 netflix_countries_filtered=pd.DataFrame(netflix_subset_c_noNaN)
 netflix_nat_year=netflix_countries_filtered.merge(netflix_subset, on="country",how="left")
-print(netflix_nat_year)
+movies_col_select=netflix_nat_year[['country','date_added','genre']]
+movies_col_select['date_added']=pd.to_datetime(movies_col_select['date_added'])
+print(movies_col_select['date_added'][1])
 #Distribution per year and continent
 
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
