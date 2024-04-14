@@ -30,28 +30,28 @@ netflix_countries_filtered=pd.DataFrame(netflix_subset_c_noNaN)
 netflix_nat_year=netflix_countries_filtered.merge(netflix_subset, on="country",how="left")
 
 #Select columns of interest. Transform date column into datetype and extract year from dates and re-write cdate_added column to show just years.
-movies_col_select=netflix_nat_year.loc[:,('country','date_added','genre')]
+movies_col_select=netflix_nat_year.loc[:,('country','date_added')]
 movies_col_select.loc[:,('date_added')]=pd.to_datetime(movies_col_select.loc[:,('date_added')])
 movies_col_select['year_added']=movies_col_select['date_added'].values  #Ignore warning but read: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 movies_col_select['year_added']=movies_col_select['year_added'].dt.year
 
-#Adddifferent dfs selecting release_year and country, release_year and genre and genre and country separately
-movies_country_genre_year=movies_col_select.loc[:,('country','genre','year_added')]
+#Add different dfs selecting release_year and country.
 movies_country_year=movies_col_select.loc[:,('country','year_added')]
-movies_genre_year=movies_col_select.loc[:,('genre','year_added')]
-movies_country_genre=movies_col_select.loc[:,('country','genre')]
 
 #Group movies by country and year added, and count movies added per year. 
 movies_c_y_sum=movies_country_year.groupby(["country","year_added"]).value_counts(ascending=True).reset_index(name='movies_per_countryear')
+#print(movies_c_y_sum)
 
-#Group movies by genre and year added, and count genres movies added per year. 
-movies_g_y_sum=movies_genre_year.groupby(["genre","year_added"]).value_counts(ascending=True).reset_index(name='movies_per_genreyear')
+# Select years where the max number of movies were released for each country. Filter out countries with max movies < 50
+max_movies_per_c= movies_c_y_sum.groupby("country").max().sort_values("year_added")
+max_movies_select= max_movies_per_c[max_movies_per_c["movies_per_countryear"] >= 50] #--> down to 37 countries out of 74
 
-#Group movies by country andgenre, and count genres movies added per country. 
-movies_g_c_sum=movies_country_genre.groupby(["country","genre"]).value_counts(ascending=True).reset_index(name='movies_per_countrygenre')
-print(movies_g_c_sum.head(10))
+#Visualize distribution of max movies released per year per country --> not very informative: sns.scatterplot(data=max_movies_per_c, x="year_added", y="movies_per_countryear") plt.xlim(2015,2024) plt.ylim(0,6100) plt.show()
 
-#sns.histplot(data=movies_grouped_sum, x="date_added", y="movies_per_countryear")
+#Visualize distribution of max movies released per year per country (after selection). --> TBC
+sns.scatterplot(data=max_movies_select, x="movies_per_countryear", y="country",hue="year_added",palette="deep")
+
+plt.show()
 
 #Distribution per year and continent
 
@@ -59,3 +59,7 @@ print(movies_g_c_sum.head(10))
 
 #Make dictionary using awoc lists of contientns and countries and country column from netflix df
 #continents_countries={}
+
+
+
+#Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
