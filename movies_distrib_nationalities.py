@@ -50,7 +50,6 @@ max_movies_select= max_movies_per_c[max_movies_per_c["movies_per_countryear"] >=
 
 #Visualize distribution of max movies released per year per country (after selection). --> TBC
 sns.scatterplot(data=max_movies_select, x="movies_per_countryear", y="country",hue="year_added",palette="deep")
-
 plt.show()
 
 #Distribution per year and continent
