@@ -35,7 +35,8 @@ movies_col_select.loc[:,('date_added')]=pd.to_datetime(movies_col_select.loc[:,(
 movies_col_select['year_added']=movies_col_select['date_added'].values  #Ignore warning but read: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 movies_col_select['year_added']=movies_col_select['year_added'].dt.year
 
-#Add different dfs selecting release_year and country.
+#Add different dfs selecting release_year and country, release_year and genre and genre and country separately
+movies_country_genre_year=movies_col_select.loc[:,('country','genre','year_added')]
 movies_country_year=movies_col_select.loc[:,('country','year_added')]
 
 #Group movies by country and year added, and count movies added per year. 
@@ -48,9 +49,13 @@ max_movies_select= max_movies_per_c[max_movies_per_c["movies_per_countryear"] >=
 
 #Visualize distribution of max movies released per year per country --> not very informative: sns.scatterplot(data=max_movies_per_c, x="year_added", y="movies_per_countryear") plt.xlim(2015,2024) plt.ylim(0,6100) plt.show()
 
-#Visualize distribution of max movies released per year per country (after selection). --> TBC
-sns.scatterplot(data=max_movies_select, x="movies_per_countryear", y="country",hue="year_added",palette="deep")
+#Group movies by country andgenre, and count genres movies added per country. 
+movies_g_c_sum=movies_country_genre.groupby(["country","genre"]).value_counts(ascending=True).reset_index(name='movies_per_countrygenre')
 
+#Visualize distribution of movies released per year (tbc)
+sns.scatterplot(data=movies_c_y_sum, x="year_added", y="movies_per_countryear")
+plt.xlim(2005,2024)
+plt.ylim(0,1100)
 plt.show()
 
 #Distribution per year and continent
