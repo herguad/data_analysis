@@ -42,16 +42,23 @@ movies_country_year=movies_col_select.loc[:,('country','year_added')]
 movies_c_y_sum=movies_country_year.groupby(["country","year_added"]).value_counts(ascending=True).reset_index(name='movies_per_countryear')
 #print(movies_c_y_sum)
 
-# Select years where the max number of movies were released for each country. Filter out countries with max movies < 50
+# Select years where the max number of movies were released for each country. Filter out countries with max movies < 50. Sort by count in descending order.. Few countries in this list are below 50, so increase filter limit to >200.
 max_movies_per_c= movies_c_y_sum.groupby("country").max().sort_values("year_added")
-max_movies_select= max_movies_per_c[max_movies_per_c["movies_per_countryear"] >= 50] #--> down to 37 countries out of 74
-
+max_movies_over200= max_movies_per_c[max_movies_per_c["movies_per_countryear"] >= 200].sort_values("movies_per_countryear", ascending=False) #--> down to 23 countries out of 74
+#max_movies_over200= max_movies_select.iloc[max_movies_select['country','movies_per_countryear']]
+#print(max_movies_over200)
 #Visualize distribution of max movies released per year per country --> not very informative: sns.scatterplot(data=max_movies_per_c, x="year_added", y="movies_per_countryear") plt.xlim(2015,2024) plt.ylim(0,6100) plt.show()
 
-#Visualize distribution of max movies released per year per country (after selection). --> TBC
-sns.scatterplot(data=max_movies_select, x="movies_per_countryear", y="country",hue="year_added",palette="deep")
-plt.show()
+#Visualize distribution of max movies released per year per country (after selection). --> Needs subseleection to get good visuals: sns.scatterplot(data=max_movies_select, x="year_added",y="movies_per_countryear"). 
+# Most movies were released in 2020 and 2021, so 'year added' should be included as hue categorically, i.e. w/catplot or relplot.
 
+fig1=sns.relplot( data=max_movies_over200,x="country",y= "movies_per_countryear", kind="scatter", hue="year_added", style="year_added", palette="RdBu")
+fig1.set(yscale="log")
+plt.xlim(-1,25)
+plt.ylim(400,1500000)
+plt.xticks(rotation=90)
+fig1.set(xlabel="Country",ylabel="Max movies released")
+plt.show()
 #Distribution per year and continent
 
 #netflix_countries=movies_grouped_sum.drop_duplicates(subset="country",keep='first',ignore_index=True)[["country"]]
