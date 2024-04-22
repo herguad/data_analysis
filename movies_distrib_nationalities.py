@@ -52,11 +52,11 @@ max_movies_over200= max_movies_per_c[max_movies_per_c["movies_per_countryear"] >
 #Visualize distribution of max movies released per year per country (after selection). --> Needs subseleection to get good visuals: sns.scatterplot(data=max_movies_select, x="year_added",y="movies_per_countryear"). 
 # Most movies were released in 2020 and 2021, so 'year added' should be included as hue categorically, i.e. w/catplot or relplot.
 
-fig1=sns.relplot( data=max_movies_over200,x="country",y= "movies_per_countryear", kind="scatter", hue="year_added", style="year_added", palette="RdBu")
+fig1=sns.relplot(data=max_movies_over200,x="country",y= "movies_per_countryear", col="year_added", kind="scatter")
 fig1.set(yscale="log")
 plt.xlim(-1,25)
 plt.ylim(400,1500000)
-plt.xticks(rotation=90)
+fig1.set_xticklabels(rotation=90)
 fig1.set(xlabel="Country",ylabel="Max movies released")
 plt.show()
 #Distribution per year and continent
