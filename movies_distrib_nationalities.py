@@ -50,8 +50,7 @@ max_movies_over200= max_movies_per_c[max_movies_per_c["movies_per_countryear"] >
 #Visualize distribution of max movies released per year per country --> not very informative: sns.scatterplot(data=max_movies_per_c, x="year_added", y="movies_per_countryear") plt.xlim(2015,2024) plt.ylim(0,6100) plt.show()
 
 #Visualize distribution of max movies released per year per country (after selection). --> Needs subseleection to get good visuals: sns.scatterplot(data=max_movies_select, x="year_added",y="movies_per_countryear"). 
-# Most movies were released in 2020 and 2021, so 'year added' should be included as hue categorically, i.e. w/catplot or relplot.
-
+##Most movies were released in 2020 and 2021, so 'year added' should be included as hue categorically, i.e. w/catplot or relplot.
 fig1=sns.relplot(data=max_movies_over200,x="country",y= "movies_per_countryear", col="year_added", kind="scatter")
 fig1.set(yscale="log")
 plt.xlim(-1,25)
@@ -59,6 +58,10 @@ plt.ylim(400,1500000)
 fig1.set_xticklabels(rotation=90)
 fig1.set(xlabel="Country",ylabel="Max movies released")
 plt.show()
+
+## The facetted plot shows a corr8elation between year_added and nationalities such that in 2020 half the countries were included for releases in 2020 and the other half in 2021. We can check this, manually, by selecting the rows of df  fro each year_added:
+
+
 #Distribution per year and continent
 
 #netflix_countries=movies_grouped_sum.drop_duplicates(subset="country",keep='first',ignore_index=True)[["country"]]
