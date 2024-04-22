@@ -60,9 +60,9 @@ fig1.set(xlabel="Country",ylabel="Max movies released")
 plt.show()
 
 ## The facetted plot shows a corr8elation between year_added and nationalities such that in 2020 half the countries were included for releases in 2020 and the other half in 2021. We can check this, manually, by selecting the rows of df  fro each year_added:
-added_2020=max_movies_over200.loc[("year_added"==2020)]
-added_2021=max_movies_over200.loc[("year_added"==2021)]
-print(added_2020,added_2021)
+added_2020=max_movies_over200[max_movies_over200["year_added"]==2020] #.shape shows 12 distinct countries
+added_2021=max_movies_over200[max_movies_over200["year_added"]==2021] #.shape shows 11 distinct countries
+#print(added_2020,added_2021)
 #--> KeyError: 'False: boolean label can not be used without a boolean index' TBC
 
 #Distribution per year and continent
