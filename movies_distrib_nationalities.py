@@ -66,7 +66,26 @@ added_2021=max_movies_over200[max_movies_over200["year_added"]==2021] #.shape sh
 #Distribution per year and continent
 
 #Make dictionary using awoc lists of contientns and countries and country column from netflix df
-#continents_countries={}
+#Make dictionary using awoc lists of contienents and countries and country column from netflix df (which is the index, so first, reset index)
+max_2020_movies=added_2020.reset_index()
+max_2021_movies=added_2021.reset_index()
+
+#1 attempt --> empty results
+continents_countries={}
+for v in max_2020_movies[["country"]].iterrows():
+    if v in countries_of_africa:
+        continents_countries["Africa"].append(v)
+    elif v in countries_of_asia:
+        continents_countries["Asia"].append(v)
+    elif v in countries_of_europe:
+        continents_countries["Europe"].append(v)
+    elif v in countries_of_north_america:
+        continents_countries["N_America"].append(v)
+    elif v in countries_of_oceania:
+        continents_countries["Oceania"].append(v)
+    elif v in countries_of_south_america:
+        continents_countries["S_America"].append(v)
+    print(continents_countries)
 
 
 
