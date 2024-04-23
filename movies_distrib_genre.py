@@ -28,3 +28,5 @@ print(movies_g_y_sum)
 #Group movies by country andgenre, and count genres movies added per country. 
 movies_g_c_sum=movies_country_genre.groupby(["country","genre"]).value_counts(ascending=True).reset_index(name='movies_per_countrygenre')
 print(movies_g_c_sum)
+
+#Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
