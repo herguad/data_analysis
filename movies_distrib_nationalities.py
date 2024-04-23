@@ -87,6 +87,8 @@ for v in max_2020_movies[["country"]].iterrows():
         continents_countries["S_America"].append(v)
     print(continents_countries)
 
+#2 attempt --> empty results
+american_countries={"S_America":coun for coun in (max_2020_movies["country"].items() or max_2021_movies["country"].items()) if coun in countries_of_south_america}
 
 
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
