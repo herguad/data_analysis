@@ -70,4 +70,44 @@ added_2021=max_movies_over200[max_movies_over200["year_added"]==2021] #.shape sh
 max_2020_movies=added_2020.reset_index().rename(columns={"movies_per_countryear":"movies_per_country_2020"}).drop(columns=["year_added"])
 max_2021_movies=added_2021.reset_index().rename(columns={"movies_per_countryear":"movies_per_country_2021"}).drop(columns=["year_added"])
 
+keys_set = ['Africa','Asia','Europe','N_America','S_America','Oceania']
+
+continents_country={key : [] for key in keys_set}
+
+for i in max_2020_movies["country"]:
+    if i in countries_of_africa:
+        continents_country['Africa'].append(i)
+    elif i in countries_of_asia:
+        continents_country['Asia'].append(i)
+    elif i in countries_of_europe:
+        continents_country['Europe'].append(i)
+    elif i in countries_of_north_america:
+        continents_country['N_America'].append(i)
+    elif i in countries_of_south_america:
+        continents_country['S_America'].append(i)
+    elif i in countries_of_oceania:
+        continents_country['Oceania'].append(i)
+    else:
+        print('Mystery')
+
+print(continents_country)
+
+for i in max_2021_movies["country"]:
+    if i in countries_of_africa:
+        continents_country['Africa'].append(i)
+    elif i in countries_of_asia:
+        continents_country['Asia'].append(i)
+    elif i in countries_of_europe:
+        continents_country['Europe'].append(i)
+    elif i in countries_of_north_america:
+        continents_country['N_America'].append(i)
+    elif i in countries_of_south_america:
+        continents_country['S_America'].append(i)
+    elif i in countries_of_oceania:
+        continents_country['Oceania'].append(i)
+    else:
+        print('Mystery')
+
+print(continents_country)
+
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
