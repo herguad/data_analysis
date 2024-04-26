@@ -45,4 +45,6 @@ movies_country_tot=tot_movies_country.rename(columns={"country":"movies_per_coun
 movies_country_tot=movies_country_tot.sort_values(by="movies_per_country",ascending=False)
 #print(movies_country_tot.head())
 
+#Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
+
 
