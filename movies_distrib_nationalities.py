@@ -40,7 +40,10 @@ movies_country_year=movies_col_select.loc[:,('country','year_added')]
 
 #Group movies by country and year added, and count movies added per year. 
 movies_c_y_sum=movies_country_year.groupby(["country","year_added"]).value_counts(ascending=True).reset_index(name='movies_per_countryear')
-#print(movies_c_y_sum)
+
+#Count total number of movies added by country
+tot_movies_country=movies_country_year.groupby("country")[["country"]].count()
+movies_country_tot=tot_movies_country.rename(columns={"country":"movies_per_country"})
 
 # Select years where the max number of movies were released for each country. Filter out countries with max movies < 50. Sort by count in descending order.. Few countries in this list are below 50, so increase filter limit to >200.
 max_movies_per_c= movies_c_y_sum.groupby("country").max().sort_values("year_added")
