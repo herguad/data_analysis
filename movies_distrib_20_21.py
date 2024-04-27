@@ -90,8 +90,6 @@ for i in max_2020_movies["country"]:
     else:
         print('Mystery')
 
-print(continents_country)
-
 for i in max_2021_movies["country"]:
     if i in countries_of_africa:
         continents_country['Africa'].append(i)
@@ -108,6 +106,10 @@ for i in max_2021_movies["country"]:
     else:
         print('Mystery')
 
-print(continents_country)
+#Turn dictionary into a df. Count countries per continent included in 20 and 21 added movies.
+countries_by_cont= pd.DataFrame.from_dict(continents_country,orient='index')
+countries_by_cont=countries_by_cont.transpose()
+countries_per_cont=countries_by_cont.count().reset_index()
+countries_per_cont=countries_per_cont.rename(columns={"index": "continent", 0: "count"})
 
-#Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
+#Visualizing the distributions and finding the most and least represented continents in Netflix library in 2020 and 2021.
