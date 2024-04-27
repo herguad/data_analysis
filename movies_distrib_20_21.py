@@ -113,3 +113,12 @@ countries_per_cont=countries_by_cont.count().reset_index()
 countries_per_cont=countries_per_cont.rename(columns={"index": "continent", 0: "count"})
 
 #Visualizing the distributions and finding the most and least represented continents in Netflix library in 2020 and 2021.
+fig3=sns.barplot(countries_per_cont,x="continent", y="count")
+sns.set(font_scale=1)
+plt.xlim(-1,5.5)
+plt.ylim(0,10)
+fig3.set(xlabel="Continent",ylabel="Movies added in 2020 and 2021")
+plt.title("Continent representation of movies added 2020 and 2021")
+plt.show()
+
+#Visualize movies count with distinct plots for each year.
