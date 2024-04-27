@@ -121,4 +121,4 @@ fig3.set(xlabel="Continent",ylabel="Movies added in 2020 and 2021")
 plt.title("Continent representation of movies added 2020 and 2021")
 plt.show()
 
-#Visualize movies count with distinct plots for each year.
+#Visualize movies count per continent with distinct colors for each year.
