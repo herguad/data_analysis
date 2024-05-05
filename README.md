@@ -8,6 +8,9 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 - Visualizing the results in a scatter plot to show whether duration and release year for these genres are correlated.
   
 ### Has Netflix been expanding the range of nationalities of movies in their library?
+- Perform general data analyisis  to see which years saw the greatest increase in added movies to Netflix library.
+- Analyse a subset of the data for those years (2020, 2021) to get idea of trends these past years.
+- Analyse the dataset and find out what the general distirbution is for movies of different continents.
 
 ## South American movies
 
