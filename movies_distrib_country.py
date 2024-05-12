@@ -45,6 +45,42 @@ movies_country_tot=tot_movies_country.rename(columns={"country":"movies_per_coun
 movies_country_tot=movies_country_tot.sort_values(by="movies_per_country",ascending=False)
 #print(movies_country_tot.head())
 
+keys_set = ['Africa','Asia','Europe','N_America','S_America','Oceania']
+
+continents_country={key : [] for key in keys_set}
+
+for i in movies_country_tot["country"]:
+    if i in countries_of_africa:
+        continents_country['Africa'].append(i)
+    elif i in countries_of_asia:
+        continents_country['Asia'].append(i)
+    elif i in countries_of_europe:
+        continents_country['Europe'].append(i)
+    elif i in countries_of_north_america:
+        continents_country['N_America'].append(i)
+    elif i in countries_of_south_america:
+        continents_country['S_America'].append(i)
+    elif i in countries_of_oceania:
+        continents_country['Oceania'].append(i)
+    else:
+        print('dunno')
+
+#print(movies_country_tot.head())
+countries_cont= pd.DataFrame.from_dict(continents_country,orient='index').reset_index().rename(columns={"index": "continent"}).transpose()
+countries_cont.columns=countries_cont.iloc[0]
+countries_cont=countries_cont.drop(countries_cont.index[0])
+#print(countries_cont.columns)
+
+for i in movies_country_tot['country'].items():
+    for k,v in continents_country.items():
+        if i == v:
+            movies_country_tot['continent']= k
+        else:
+            continue
+    print(movies_country_tot.head())
+
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
+
+
 
 
