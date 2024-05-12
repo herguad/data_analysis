@@ -107,18 +107,14 @@ for i in max_2021_movies["country"]:
         print('Mystery')
 
 #Turn dictionary into a df. Count countries per continent included in 20 and 21 added movies.
-countries_by_cont= pd.DataFrame.from_dict(continents_country,orient='index')
-countries_by_cont=countries_by_cont.transpose()
-countries_per_cont=countries_by_cont.count().reset_index()
-countries_per_cont=countries_per_cont.rename(columns={"index": "continent", 0: "count"})
+countries_cont= pd.DataFrame.from_dict(continents_country,orient='index').reset_index().rename(columns={"index": "continent"})
+countries_by_cont=countries_cont.transpose()
+countries_by_cont.columns=countries_by_cont.iloc[0]
+countries_by_cont=countries_by_cont.drop(countries_by_cont.index[0])
+
+#Add continent column in main df: max_movies_over200. 
 
 #Visualizing the distributions and finding the most and least represented continents in Netflix library in 2020 and 2021.
-fig3=sns.barplot(countries_per_cont,x="continent", y="count")
-sns.set(font_scale=1)
-plt.xlim(-1,5.5)
-plt.ylim(0,10)
-fig3.set(xlabel="Continent",ylabel="Movies added in 2020 and 2021")
-plt.title("Continent representation of movies added 2020 and 2021")
-plt.show()
+
 
 #Visualize movies count per continent with distinct colors for each year.
