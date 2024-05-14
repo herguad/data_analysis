@@ -70,7 +70,7 @@ countries_cont= pd.DataFrame.from_dict(continents_country,orient='index').reset_
 countries_cont.columns=countries_cont.iloc[0]
 countries_cont=countries_cont.drop(countries_cont.index[0])
 #print(countries_cont.columns)
-
+movies_country_tot['continent']=['' for i in range(0,74)]
 for i in movies_country_tot['country'].items():
     for k,v in continents_country.items():
         if i == v:
