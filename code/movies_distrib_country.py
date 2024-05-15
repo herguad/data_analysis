@@ -42,7 +42,7 @@ movies_country_tot=tot_movies_country.rename(columns={"country":"movies_per_coun
 movies_country_tot=movies_country_tot.sort_values(by="movies_per_country",ascending=False)
 #print(movies_country_tot.head())
 
-#List continents, make a continents_country dictionary including only countries with movies in Netflix db
+#List continents, make a continents_country dictionary including only countries with movies in Netflix db.
 keys_set = ['Africa','Asia','Europe','N_America','S_America','Oceania']
 continents_country={key : [] for key in keys_set}
 
@@ -62,6 +62,7 @@ for i in movies_country_tot["country"]:
     else:
         print('dunno')
 
+#Add an empty 'continent' column to the movies_country_tot df.
 movies_country_tot['continent']=['' for i in range(0,74)]
 
 for i in movies_country_tot['country'].values:
