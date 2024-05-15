@@ -33,7 +33,6 @@ movies_col_select.loc[:,('date_added')]=pd.to_datetime(movies_col_select.loc[:,(
 movies_col_select['year_added']=movies_col_select['date_added'].values  #Ignore warning but read: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 movies_col_select['year_added']=movies_col_select['year_added'].dt.year
 
-#Add different dfs selecting release_year and country.
 movies_country_year=movies_col_select.loc[:,('country','year_added')]
 
 #Group movies by country and year added, and count movies added per year. 
@@ -75,10 +74,12 @@ movies_country_tot['continent']=['' for i in range(0,74)]
 for i in movies_country_tot['country'].values:
     for k,v in continents_country.items():
         if i in v:
-            movies_country_tot[['continent']]= k
+            index_i= movies_country_tot.loc[movies_country_tot['country'] == i].index
+            movies_country_tot.iloc[index_i,2]= k
         else:
             continue
-print(movies_country_tot.head())
+print(movies_country_tot)
+
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
 
 
