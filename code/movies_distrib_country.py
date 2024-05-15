@@ -65,6 +65,7 @@ for i in movies_country_tot["country"]:
 #Add an empty 'continent' column to the movies_country_tot df.
 movies_country_tot['continent']=['' for i in range(0,74)]
 
+#Loop over the country column, for each country, search within the dictionary items to check for mathes. Where a match is found, consider the rows index for the df value, slice the df for that row and 'country' column. Finally, assign the corresponding continent name to the country as a value for the column 'continent'.
 for i in movies_country_tot['country'].values:
     for k,v in continents_country.items():
         if i in v:
