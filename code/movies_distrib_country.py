@@ -39,13 +39,11 @@ movies_country_year=movies_col_select.loc[:,('country','year_added')]
 #Count total number of movies added by country
 tot_movies_country=movies_country_year.groupby("country")[["country"]].count()
 movies_country_tot=tot_movies_country.rename(columns={"country":"movies_per_country"})
-
-#What are the max numbers of total movies released and their countries?
 movies_country_tot=movies_country_tot.sort_values(by="movies_per_country",ascending=False)
 #print(movies_country_tot.head())
 
+#List continents, make a continents_country dictionary including only countries with movies in Netflix db
 keys_set = ['Africa','Asia','Europe','N_America','S_America','Oceania']
-
 continents_country={key : [] for key in keys_set}
 
 for i in movies_country_tot["country"]:
@@ -64,11 +62,6 @@ for i in movies_country_tot["country"]:
     else:
         print('dunno')
 
-#print(movies_country_tot.head())
-countries_cont= pd.DataFrame.from_dict(continents_country,orient='index').reset_index().rename(columns={"index": "continent"}).transpose()
-countries_cont.columns=countries_cont.iloc[0]
-countries_cont=countries_cont.drop(countries_cont.index[0])
-#print(countries_cont.columns)
 movies_country_tot['continent']=['' for i in range(0,74)]
 
 for i in movies_country_tot['country'].values:
@@ -79,7 +72,6 @@ for i in movies_country_tot['country'].values:
         else:
             continue
 print(movies_country_tot)
-
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
 
 
