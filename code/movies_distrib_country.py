@@ -73,7 +73,13 @@ for i in movies_country_tot['country'].values:
             movies_country_tot.iloc[index_i,2]= k
         else:
             continue
-print(movies_country_tot)
+#print(movies_country_tot)
+
+#Aggregate movies per continent in a new df
+movies_counts=movies_country_tot.groupby('continent')['movies_per_country'].agg(['sum','mean']).reset_index()
+movies_counts=movies_counts.drop(movies_counts.index[0])
+movies_counts['mean']=round(movies_counts['mean'])
+
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
 
 
