@@ -82,6 +82,7 @@ movies_counts['mean']=round(movies_counts['mean'])
 movies_counts=movies_counts.sort_values(by='sum',ascending=True)
 
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
+#Movies count per continent
 fig2=sns.barplot(data=movies_counts,x="continent",y= "sum", hue='sum',palette=sns.color_palette('deep', n_colors=6))
 fig2.set(yscale="log")
 plt.xlim(-1,6)
@@ -89,6 +90,7 @@ plt.ylim(1000,4600000)
 fig2.set(xlabel="Continent",ylabel="sum")
 fig2.tick_params(labelsize=8)
 plt.show()
+
 
 
 
