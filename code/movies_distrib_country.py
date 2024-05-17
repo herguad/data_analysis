@@ -75,10 +75,11 @@ for i in movies_country_tot['country'].values:
             continue
 #print(movies_country_tot)
 
-#Aggregate movies per continent in a new df
+#Aggregate movies per continent in a new df. Sort df by sum for clearer plot.
 movies_counts=movies_country_tot.groupby('continent')['movies_per_country'].agg(['sum','mean']).reset_index()
 movies_counts=movies_counts.drop(movies_counts.index[0])
 movies_counts['mean']=round(movies_counts['mean'])
+movies_counts=movies_counts.sort_values(by='sum',ascending=True)
 
 #Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
 fig2=sns.barplot(data=movies_counts,x="continent",y= "sum", hue='sum',palette=sns.color_palette('deep', n_colors=6))
