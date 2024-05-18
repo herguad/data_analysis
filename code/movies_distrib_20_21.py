@@ -35,26 +35,23 @@ movies_col_select.loc[:,('date_added')]=pd.to_datetime(movies_col_select.loc[:,(
 movies_col_select['year_added']=movies_col_select['date_added'].values  #Ignore warning but read: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 movies_col_select['year_added']=movies_col_select['year_added'].dt.year
 
-#Add different dfs selecting release_year and country.
+#Add different dfs selecting year_added and country.
 movies_country_year=movies_col_select.loc[:,('country','year_added')]
 
 #Group movies by country and year added, and count movies added per year. 
 movies_c_y_sum=movies_country_year.groupby(["country","year_added"]).value_counts(ascending=True).reset_index(name='movies_per_countryear')
 
-#Count total number of movies added by country
-tot_movies_country=movies_country_year.groupby("country")[["country"]].count()
-movies_country_tot=tot_movies_country.rename(columns={"country":"movies_per_country"})
-
 # Select years where the max number of movies were released for each country. Filter out countries with max movies < 50. Sort by count in descending order.. Few countries in this list are below 50, so increase filter limit to >200.
-max_movies_per_c= movies_c_y_sum.groupby("country").max().sort_values("year_added")
-max_movies_over200= max_movies_per_c[max_movies_per_c["movies_per_countryear"] >= 200].sort_values("movies_per_countryear", ascending=False) #--> down to 23 countries out of 74
-#max_movies_over200= max_movies_select.iloc[max_movies_select['country','movies_per_countryear']]
-#print(max_movies_over200)
-#Visualize distribution of max movies released per year per country --> not very informative: sns.scatterplot(data=max_movies_per_c, x="year_added", y="movies_per_countryear") plt.xlim(2015,2024) plt.ylim(0,6100) plt.show()
+max_movies_per_c_y= movies_c_y_sum.groupby("country").max().sort_values("year_added")
 
-#Visualize distribution of max movies released per year per country (after selection). --> Needs subseleection to get good visuals: sns.scatterplot(data=max_movies_select, x="year_added",y="movies_per_countryear"). 
-##Most movies were released in 2020 and 2021, so 'year added' should be included as hue categorically, i.e. w/catplot or relplot.
-fig1=sns.relplot(data=max_movies_over200,x="country",y= "movies_per_countryear", col="year_added", kind="scatter")
+max_movies_over200= max_movies_per_c_y[max_movies_per_c_y["movies_per_countryear"] >= 200].sort_values("movies_per_countryear", ascending=False) #--> down to 23 countries out of 74
+max_movies_over200=max_movies_over200.reset_index()
+#print(max_movies_over200)
+
+#Visualize distribution of max movies released per year per country --> not very informative: sns.scatterplot(data=max_movies_per_c, x="year_added", y="movies_per_countryear") plt.xlim(2015,2024) plt.ylim(0,6100) plt.show()
+#Visualize distribution of max movies released per year per country (after selection). --> Needs subselection to get good visuals: sns.scatterplot(data=max_movies_select, x="year_added",y="movies_per_countryear"). 
+# Most movies were released in 2020 and 2021, so 'year added' should be included as hue categorically, i.e. w/catplot or relplot.
+fig1=sns.relplot(data=max_movies_over200,x="country",y= "movies_per_countryear", col="year_added", kind="scatter",hue="year_added",palette=sns.color_palette('colorblind', n_colors=2))
 fig1.set(yscale="log")
 plt.xlim(-1,25)
 plt.ylim(400,1500000)
@@ -66,9 +63,12 @@ plt.show()
 added_2020=max_movies_over200[max_movies_over200["year_added"]==2020] #.shape shows 12 distinct countries
 added_2021=max_movies_over200[max_movies_over200["year_added"]==2021] #.shape shows 11 distinct countries
 
-#Make dictionary using awoc lists of contientns and countries and country column from netflix df
-max_2020_movies=added_2020.reset_index().rename(columns={"movies_per_countryear":"movies_per_country_2020"}).drop(columns=["year_added"])
-max_2021_movies=added_2021.reset_index().rename(columns={"movies_per_countryear":"movies_per_country_2021"}).drop(columns=["year_added"])
+
+#Distribution per year and continent
+
+#Make dictionary using awoc lists of contienents and countries and country column from netflix df (which is the index, so first, reset index)
+max_2020_movies=added_2020.reset_index().rename(columns={"movies_per_countryear":"movies_per_country_2020"}).drop(columns=["year_added","index"])
+max_2021_movies=added_2021.reset_index().rename(columns={"movies_per_countryear":"movies_per_country_2021"}).drop(columns=["year_added","index"])
 
 keys_set = ['Africa','Asia','Europe','N_America','S_America','Oceania']
 
@@ -90,6 +90,7 @@ for i in max_2020_movies["country"]:
     else:
         print('Mystery')
 
+
 for i in max_2021_movies["country"]:
     if i in countries_of_africa:
         continents_country['Africa'].append(i)
@@ -106,15 +107,7 @@ for i in max_2021_movies["country"]:
     else:
         print('Mystery')
 
-#Turn dictionary into a df. Count countries per continent included in 20 and 21 added movies.
-countries_cont= pd.DataFrame.from_dict(continents_country,orient='index').reset_index().rename(columns={"index": "continent"})
-countries_by_cont=countries_cont.transpose()
-countries_by_cont.columns=countries_by_cont.iloc[0]
-countries_by_cont=countries_by_cont.drop(countries_by_cont.index[0])
-
-#Add continent column in main df: max_movies_over200. 
-
-#Visualizing the distributions and finding the most and least represented continents in Netflix library in 2020 and 2021.
+#print(max_2020_movies,max_2021_movies)
 
 
 #Visualize movies count per continent with distinct colors for each year.
