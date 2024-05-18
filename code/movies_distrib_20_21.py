@@ -108,6 +108,6 @@ for i in max_2021_movies["country"]:
         print('Mystery')
 
 #print(max_2020_movies,max_2021_movies)
-
+#Repetir continent adding con estas dfs para hace un recorte lupa de movies_country para los años 2020 y 2021 (años de maximas incorporaciones)
 
 #Visualize movies count per continent with distinct colors for each year.
