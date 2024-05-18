@@ -31,4 +31,4 @@ print(movies_g_c_sum)
 
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
-
+#Find whether there's a correlation between genre and continent . --> sns. heatmap
