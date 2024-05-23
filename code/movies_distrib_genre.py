@@ -30,7 +30,9 @@ movies_g_c_sum=movies_country_genre.groupby(["country","genre"]).value_counts(as
 print(movies_g_c_sum)
 
 #Count uncategorized movies and remove/display on their own (by country and by year). Add to NaN Movies file.
-
+uncategorized_s=movies_g_y_sum[movies_g_y_sum['genre']=='Uncategorized']['movies_per_genreyear'].sum()
+uncategorized=movies_g_y_sum[movies_g_y_sum['genre']=='Uncategorized']
+print(uncategorized)
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
