@@ -29,6 +29,8 @@ print(movies_g_y_sum)
 movies_g_c_sum=movies_country_genre.groupby(["country","genre"]).value_counts(ascending=True).reset_index(name='movies_per_countrygenre')
 print(movies_g_c_sum)
 
+#Count uncategorized movies and remove/display on their own (by country and by year). Add to NaN Movies file.
+
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
