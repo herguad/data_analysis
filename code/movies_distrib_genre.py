@@ -41,6 +41,9 @@ u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
 movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
 print(movies_genre_country)
 
+#Add total movies per genre and plot.
+tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts()
+print(tot_per_genre)
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
