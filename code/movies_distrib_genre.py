@@ -42,11 +42,13 @@ movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
 print(movies_genre_country)
 
 #Add total movies per genre and plot.
-tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts()
-print(tot_per_genre)
+tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts().reset_index(name='count')
+tot_per_genre=tot_per_genre.sort_values(by='count',ascending=False)
+#print(tot_per_genre)
 
 sns.barplot(tot_per_genre,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=18))
 plt.show()
+
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
