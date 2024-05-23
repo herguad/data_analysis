@@ -12,7 +12,7 @@ netflix_df = pd.read_csv("netflix_data.csv")
 netflix_subset = netflix_df[netflix_df["type"] == "Movie"]
 
 #Select columns of interest. Transform date column into datetype and extract year from dates and re-write cdate_added column to show just years.
-movies_col_select=netflix_nat_year.loc[:,('country','date_added','genre')]
+movies_col_select=netflix_subset.loc[:,('country','date_added','genre')]
 movies_col_select.loc[:,('date_added')]=pd.to_datetime(movies_col_select.loc[:,('date_added')])
 movies_col_select['year_added']=movies_col_select['date_added'].values  #Ignore warning but read: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 movies_col_select['year_added']=movies_col_select['year_added'].dt.year
