@@ -36,6 +36,11 @@ uncategorized=movies_g_y_sum[movies_g_y_sum['genre']=='Uncategorized']
 movies_genre_year=movies_g_y_sum.drop(index=[107,108,109,110,111,112,113])
 print(movies_genre_year)
 
+uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
+u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
+movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
+print(movies_genre_country)
+
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
