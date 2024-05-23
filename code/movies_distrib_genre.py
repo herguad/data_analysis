@@ -52,6 +52,17 @@ plt.show()
 #Choose only genres with over half the total movies (30). Plot genre distribution by country for those genres.
 pop_genres=tot_per_genre[tot_per_genre['count'] >= 30]
 #print(pop_genres)
+sns.barplot(pop_genres,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=7))
+plt.show()
+
+pop_genre_country=movies_genre_country.merge(pop_genres,on='genre',how='right').drop(columns='count')
+pop_genre_sort=pop_genre_country.sort_values(by='genre',ascending= False)
+#print(pop_genre_sort)
+
+fig6=sns.catplot(pop_genre_sort,x='movies_per_countrygenre',y='country',row='genre',kind='bar',hue='genre',palette=sns.color_palette('colorblind', n_colors=7))
+fig6.set(yscale="log")
+plt.show()
+
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
