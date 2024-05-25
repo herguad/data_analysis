@@ -60,9 +60,6 @@ pop_genre_country=movies_genre_country.merge(pop_genres,on='genre',how='right').
 pop_genre_sort=pop_genre_country.sort_values(by='genre',ascending= False)
 #print(pop_genre_sort)
 
-print(pop_genre_sort[pop_genre_sort['movies_per_countrygenre']<2].index)
-pop_genre_sort=pop_genre_sort.drop(index=[215, 218, 232, 223, 220, 219, 225, 208, 201, 213, 212, 207, 206, 203,50,  54,  55,  48,  47,  17,  30,  26,  23,  20,  15,  11,  10, 6, 3,  35,  41, 171, 173, 183, 178, 169, 166, 186, 200, 199, 189, 187, 184,  65, 109,  96,  89,  87, 110,  81, 237, 241, 240, 239, 253, 254, 244, 255, 256, 252, 259, 249, 245, 121, 129, 125, 119, 118, 115, 150, 148, 145, 135, 144, 142, 140, 132])
-
 less_than_avg_movies=pop_genre_sort[pop_genre_sort['movies_per_countrygenre'] < 7]
 list_less_than_avg_movies=less_than_avg_movies.index
 pop_genre_sort=pop_genre_sort.drop(index=list_less_than_avg_movies)
