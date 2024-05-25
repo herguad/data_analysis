@@ -63,15 +63,14 @@ pop_genre_sort=pop_genre_country.sort_values(by='genre',ascending= False)
 print(pop_genre_sort[pop_genre_sort['movies_per_countrygenre']<2].index)
 pop_genre_sort=pop_genre_sort.drop(index=[215, 218, 232, 223, 220, 219, 225, 208, 201, 213, 212, 207, 206, 203,50,  54,  55,  48,  47,  17,  30,  26,  23,  20,  15,  11,  10, 6, 3,  35,  41, 171, 173, 183, 178, 169, 166, 186, 200, 199, 189, 187, 184,  65, 109,  96,  89,  87, 110,  81, 237, 241, 240, 239, 253, 254, 244, 255, 256, 252, 259, 249, 245, 121, 129, 125, 119, 118, 115, 150, 148, 145, 135, 144, 142, 140, 132])
 
-less_than_5_movies=pop_genre_sort[pop_genre_sort['movies_per_countrygenre']<5]
-n_less_than_5=less_than_5_movies.index
-pop_genre_sort=pop_genre_sort.drop(index=n_less_than_5)
-#print(pop_genre_sort[pop_genre_sort['movies_per_countrygenre']<5].index)
+less_than_avg_movies=pop_genre_sort[pop_genre_sort['movies_per_countrygenre'] < 7]
+list_less_than_avg_movies=less_than_avg_movies.index
+pop_genre_sort=pop_genre_sort.drop(index=list_less_than_avg_movies)
+#print(list_less_than_avg_movies) #--> 176 country/genre pairs!
 
-fig6=sns.catplot(pop_genre_sort,x='movies_per_countrygenre',y='country',row='genre',kind='bar',hue='genre',palette=sns.color_palette('colorblind', n_colors=7))
-fig6.set(yscale="log")
+fig6=sns.catplot(pop_genre_sort,x='movies_per_countrygenre',col='genre', col_wrap=3, kind='count',hue='genre',palette=sns.color_palette('colorblind', n_colors=6))
+fig6.set_xticklabels(rotation=90)
 plt.show()
-
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
