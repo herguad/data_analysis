@@ -58,6 +58,7 @@ plt.show()
 pop_genre_country=movies_genre_country.merge(pop_genres,on='genre',how='right').drop(columns='count')
 pop_genre_sort=pop_genre_country.sort_values(by='genre',ascending= False)
 #print(pop_genre_sort)
+#'International movies' is too relative. Drop it to compare defined genres across coutnries.
 
 fig6=sns.catplot(pop_genre_sort,x='movies_per_countrygenre',y='country',row='genre',kind='bar',hue='genre',palette=sns.color_palette('colorblind', n_colors=7))
 fig6.set(yscale="log")
