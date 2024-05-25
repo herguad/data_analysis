@@ -45,6 +45,7 @@ print(movies_genre_country)
 tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts().reset_index(name='count')
 tot_per_genre=tot_per_genre.sort_values(by='count',ascending=False)
 #print(tot_per_genre)
+#'International movies' is too relative. Drop it to compare defined genres across countries.
 
 sns.barplot(tot_per_genre,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=18))
 plt.show()
@@ -58,7 +59,6 @@ plt.show()
 pop_genre_country=movies_genre_country.merge(pop_genres,on='genre',how='right').drop(columns='count')
 pop_genre_sort=pop_genre_country.sort_values(by='genre',ascending= False)
 #print(pop_genre_sort)
-#'International movies' is too relative. Drop it to compare defined genres across coutnries.
 
 fig6=sns.catplot(pop_genre_sort,x='movies_per_countrygenre',y='country',row='genre',kind='bar',hue='genre',palette=sns.color_palette('colorblind', n_colors=7))
 fig6.set(yscale="log")
