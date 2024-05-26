@@ -69,6 +69,10 @@ pop_genre_sort=pop_genre_sort.drop(index=list_less_than_avg_movies)
 
 pop_genre_sum=pop_genre_sort.groupby(['genre'])[['movies_per_countrygenre']].sum().sort_values(by='movies_per_countrygenre',ascending=True)
 
+fig6=sns.barplot(pop_genre_sum,x='genre',y='movies_per_countrygenre',hue='genre',palette=sns.color_palette('colorblind', n_colors=6))
+fig6.set(xlabel="Most popular genres",ylabel="Total number of movies")
+plt.show()
+
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
