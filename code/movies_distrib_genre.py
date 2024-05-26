@@ -65,9 +65,7 @@ list_less_than_avg_movies=less_than_avg_movies.index
 pop_genre_sort=pop_genre_sort.drop(index=list_less_than_avg_movies)
 #print(list_less_than_avg_movies) #--> 176 country/genre pairs!
 
-fig6=sns.catplot(pop_genre_sort,x='movies_per_countrygenre',col='genre', col_wrap=3, kind='count',hue='genre',palette=sns.color_palette('colorblind', n_colors=6))
-fig6.set_xticklabels(rotation=90)
-plt.show()
+
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
