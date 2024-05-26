@@ -54,7 +54,8 @@ plt.show()
 #Choose only genres with over half the total movies (30). Plot genre distribution by country for those genres.
 pop_genres=tot_per_genre[tot_per_genre['count'] >= 30]
 #print(pop_genres)
-sns.barplot(pop_genres,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=7))
+fig5=sns.barplot(pop_genres,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=6))
+fig5.set(xlabel="Number of countries",ylabel="Genre")
 plt.show()
 
 pop_genre_country=movies_genre_country.merge(pop_genres,on='genre',how='right').drop(columns='count')
