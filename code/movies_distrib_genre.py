@@ -67,6 +67,7 @@ list_less_than_avg_movies=less_than_avg_movies.index
 pop_genre_sort=pop_genre_sort.drop(index=list_less_than_avg_movies)
 #print(list_less_than_avg_movies) #--> 176 country/genre pairs!
 
+pop_genre_sum=pop_genre_sort.groupby(['genre'])[['movies_per_countrygenre']].sum().sort_values(by='movies_per_countrygenre',ascending=True)
 
 #Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
 #Find whether there's a correlation between genre and country . --> sns. heatmap
