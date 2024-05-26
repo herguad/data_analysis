@@ -47,7 +47,8 @@ tot_per_genre=tot_per_genre.sort_values(by='count',ascending=False)
 #print(tot_per_genre)
 #'International movies' is too relative. Drop it to compare defined genres across countries.
 
-sns.barplot(tot_per_genre,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=18))
+fig4=sns.barplot(tot_per_genre,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=17))
+fig4.set(xlabel="Number of countries",ylabel="Genre")
 plt.show()
 
 #Choose only genres with over half the total movies (30). Plot genre distribution by country for those genres.
