@@ -36,6 +36,10 @@ uncategorized=movies_g_y_sum[movies_g_y_sum['genre']=='Uncategorized']
 movies_genre_year=movies_g_y_sum.drop(index=[107,108,109,110,111,112,113])
 print(movies_genre_year)
 
+#Which genre was the most popular each year?
+pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
+#print(movies_genre_year.movies_per_genreyear.describe())
+
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
 u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
 movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
