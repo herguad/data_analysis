@@ -42,6 +42,8 @@ pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_ge
 #print(movies_genre_year.movies_per_genreyear.describe())
 
 #Filter years with over 8 movies added, which is the 2nd quartile as shown by describe()
+pop_genre_year_2Q=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
+print(pop_genre_year_2Q)
 
 #Stats based on countries
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
