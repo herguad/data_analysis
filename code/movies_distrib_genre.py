@@ -30,6 +30,7 @@ movies_g_c_sum=movies_country_genre.groupby(["country","genre"]).value_counts(as
 print(movies_g_c_sum)
 
 #Count uncategorized movies and remove/display on their own (by country and by year). Add to NaN Movies file.
+#Stats based on years when movies were added
 uncategorized_s=movies_g_y_sum[movies_g_y_sum['genre']=='Uncategorized']['movies_per_genreyear'].sum()
 uncategorized=movies_g_y_sum[movies_g_y_sum['genre']=='Uncategorized']
 #print(uncategorized)
@@ -40,6 +41,9 @@ print(movies_genre_year)
 pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
 #print(movies_genre_year.movies_per_genreyear.describe())
 
+#Filter years with over 8 movies added, which is the 2nd quartile as shown by describe()
+
+#Stats based on countries
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
 u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
 movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
