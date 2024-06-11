@@ -39,17 +39,18 @@ print(movies_genre_year)
 
 #Which genre was the most popular each year?
 pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
-#print(movies_genre_year.movies_per_genreyear.describe())
 
-#Filter years with over 8 movies added, which is the 2nd quartile as shown by describe()
-pop_genre_year_2Q=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
-print(pop_genre_year_2Q)
+#Filter years with over 8 movies added, which is the 2nd quartile as shown by describe(). Remove rows with genre 'International Movies'.
+pop_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
+pop_genre_year=pop_genre_year.drop(index=[75,76,77,78])
+#print(pop_genre_year)
 
 #Stats based on countries
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
 u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
 movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
 print(movies_genre_country)
+
 
 #Add total movies per genre and plot.
 tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts().reset_index(name='count')
