@@ -49,14 +49,18 @@ pop_genre_year=pop_genre_year.drop(index=[75,76,77,78])
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
 u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
 movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
-print(movies_genre_country)
-
+#print(movies_genre_country[movies_genre_country['genre']=='International Movies'].describe()) --> 31 rows from various countries
+#Separate international movies into a different df and remove from main.
+international_movies_c= movies_genre_country[movies_genre_country['genre']=='International Movies']
+#print(international_movies_c.index)
+movies_genre_country=movies_genre_country.drop(index=[ 16,  22,  35,  45,  55,  63,  77,  84,  95, 106, 116, 132, 152, 166, 170, 173, 190, 199, 212, 224, 234, 241, 246, 259, 268, 275, 285, 300, 307, 318, 327])
+#print(movies_genre_country) --> check n of rows is 31 down.
 
 #Add total movies per genre and plot.
 tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts().reset_index(name='count')
 tot_per_genre=tot_per_genre.sort_values(by='count',ascending=False)
 #print(tot_per_genre)
-#'International movies' is too relative. Drop it to compare defined genres across countries.
+
 
 fig4=sns.barplot(tot_per_genre,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=17))
 fig4.set(xlabel="Number of countries",ylabel="Genre")
