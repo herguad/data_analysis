@@ -10,7 +10,7 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 ### What is the distribution of added movies per genre? What are the top genres for movies added in the library?
 
 ### Has Netflix been expanding the range of nationalities of movies in their library?
-- Perform general data analyisis  to see which years saw the greatest increase in added movies to Netflix library.
+- Perform general data analysis to see which years saw the greatest increase in added movies to Netflix library.
 - Analyse a subset of the data for those years (2020, 2021) to get idea of trends these past years.
 - Analyse the dataset and find out what the general distirbution is for movies of different continents.
 
