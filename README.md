@@ -10,6 +10,8 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 ### What is the distribution of added movies per genre? What are the top genres for movies added in the library?
 - Select and clean the data.
 - Count number of movies per genre added to Netflix library.
+- Plot total sums per genre and select those with sums over median (pop genres).
+- Plot pop genres counts per genre.
 
 ### Has Netflix been expanding the range of nationalities of movies in their library?
 - Perform general data analysis to see which years saw the greatest increase in added movies to Netflix library.
