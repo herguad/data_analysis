@@ -44,8 +44,10 @@ fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear', 
 fig7.set(xlabel="Year",ylabel="Movies per year")
 plt.show()
 
-#Which genre was the most popular each year?
+#Which genre was the most popular each year? 
 pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
+
+#Visualize 
 
 #Filter years with over 8 movies added, which is the 2nd quartile as shown by describe(). Remove rows with genre 'International Movies'.
 pop_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
