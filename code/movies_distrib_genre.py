@@ -65,7 +65,7 @@ pop_genre_year=filtered_genre_year.groupby(['year_added'])[['genre','movies_per_
 #Visualize max number of movies released per genre each year. For those years with over 8 movies added per genre.
 fig9=sns.barplot(pop_genre_year,x='year_added',y='movies_per_genreyear',hue='genre',palette=sns.set_palette('deep',n_colors=6))
 fig9.set(yscale="log")
-fig9.set(xlabel="Year",ylabel="Movies per year")
+fig9.set(xlabel="Year",ylabel="Genre with max number of releases per year")
 fig9.tick_params(labelsize=8)
 plt.show()
 
