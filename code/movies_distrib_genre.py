@@ -54,9 +54,9 @@ pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_ge
 #print(pop_genre_year)
 #print(pop_genre_year['genre'].unique()) <--- 6 genres
 
-#Visualize max number of movies released per genre each year.
-fig8=sns.barplot(pop_genre_year,x='year_added',y='movies_per_genreyear',hue='genre',palette=sns.set_palette('deep',n_colors=6))
-fig8.set(yscale="log")
+#Visualize number of movies released per genre each year.
+fig8=sns.barplot(filtered_genre_year,x='year_added',y='movies_per_genreyear',hue='genre',palette=sns.set_palette('colorblind',n_colors=9))
+#fig8.set(yscale="log")
 fig8.set(xlabel="Year",ylabel="Movies per year")
 fig8.tick_params(labelsize=8)
 plt.show()
