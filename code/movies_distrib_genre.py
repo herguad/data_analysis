@@ -37,10 +37,12 @@ uncategorized=movies_g_y_sum[movies_g_y_sum['genre']=='Uncategorized']
 movies_genre_year=movies_g_y_sum.drop(index=[107,108,109,110,111,112,113])
 print(movies_genre_year)
 
-print(movies_genre_year['genre'].unique()) # <- 18 distinct genres adfter cleaning
-fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear', size= 'movies_per_genreyear', palette=sns.color_palette('colorblind', n_colors=18))
+print(movies_genre_year['genre'].unique()) # <- 18 distinct genres after cleaning
+
+fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear', size= 'movies_per_genreyear')
 fig7.set(xlabel="Year",ylabel="Movies per year")
 plt.show()
+
 #Which genre was the most popular each year?
 pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
 
