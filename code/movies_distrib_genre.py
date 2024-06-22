@@ -41,7 +41,7 @@ print(movies_genre_year['genre'].unique()) # <- 18 distinct genres after cleanin
 
 #Visualize movies_per_genreyear,
 fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear', size= 'movies_per_genreyear')
-fig7.set(xlabel="Year",ylabel="Movies per year")
+fig7.set(xlabel="Year",ylabel="Movies of different genres added per year")
 plt.show()
 
 #Which genre was the most popular each year? 
