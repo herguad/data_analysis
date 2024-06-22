@@ -49,10 +49,10 @@ pop_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
 pop_genre_year=pop_genre_year.drop(index=[75,76,77,78])
 print(pop_genre_year)
 
-#Which genre was the most popular each year? 
-pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
+#Which genre was the most popular each year? Considering only years with over 8 movies added.
+pop_genre_year=filtered_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
 #print(pop_genre_year)
-#print(pop_genre_year['genre'].unique()) <--- 6 genres
+#print(pop_genre_year['genre'].unique()) #<--- 3 genres
 
 #Visualize number of movies released per genre each year.
 fig8=sns.barplot(filtered_genre_year,x='year_added',y='movies_per_genreyear',hue='genre',palette=sns.set_palette('colorblind',n_colors=9))
