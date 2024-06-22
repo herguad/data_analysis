@@ -80,12 +80,12 @@ international_movies_c= movies_genre_country[movies_genre_country['genre']=='Int
 movies_genre_country=movies_genre_country.drop(index=[ 16,  22,  35,  45,  55,  63,  77,  84,  95, 106, 116, 132, 152, 166, 170, 173, 190, 199, 212, 224, 234, 241, 246, 259, 268, 275, 285, 300, 307, 318, 327])
 #print(movies_genre_country) --> check n of rows is 31 down.
 
-#Add total movies per genre.
+#Add total movies per country and genre.
 tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts().reset_index(name='count')
 tot_per_genre=tot_per_genre.sort_values(by='count',ascending=False)
 #print(tot_per_genre)
 
-#Visualize genre count by genre.
+#Visualize genre count by genre for all countries.
 fig4=sns.barplot(tot_per_genre,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=17))
 fig4.set(xlabel="Number of countries",ylabel="Genre")
 plt.show()
