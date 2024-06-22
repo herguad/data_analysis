@@ -114,6 +114,12 @@ fig6=sns.barplot(pop_genre_sum,x='genre',y='movies_per_countrygenre',hue='genre'
 fig6.set(xlabel="Most popular genres",ylabel="Total number of movies")
 plt.show()
 
-#Find whether there's a correlation between genre and number of movies released each year . --> sns. heatmap
+#Find whether there's a correlation between genre and number of movies released each year . 
+genres_per_year=filtered_genre_year.groupby(['genre'])['movies_per_genreyear'].sum().reset_index(name='sum')
+
+#print(genres_per_year.head(20))
+#genres_years= genres_per_year[['genre','sum']]
+
+fig10 = sns.heatmap(genres_per_year) #<-- ValueError: could not convert string to float: 'Action'
 #Find whether there's a correlation between genre and country . --> sns. heatmap
 #Find whether there's a correlation between genre and continent . --> sns. heatmap
