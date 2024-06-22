@@ -46,8 +46,15 @@ plt.show()
 
 #Which genre was the most popular each year? 
 pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
+#print(pop_genre_year)
+#print(pop_genre_year['genre'].unique()) <--- 6 genres
 
-#Visualize 
+#Visualize max number of movies released per genre each year.
+fig8=sns.barplot(pop_genre_year,x='year_added',y='movies_per_genreyear',hue='genre',palette=sns.set_palette('deep',n_colors=6))
+fig8.set(yscale="log")
+fig8.set(xlabel="Year",ylabel="Movies per year")
+fig8.tick_params(labelsize=8)
+plt.show()
 
 #Filter years with over 8 movies added, which is the 2nd quartile as shown by describe(). Remove rows with genre 'International Movies'.
 pop_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
