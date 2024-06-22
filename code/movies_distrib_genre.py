@@ -39,6 +39,7 @@ print(movies_genre_year)
 
 print(movies_genre_year['genre'].unique()) # <- 18 distinct genres after cleaning
 
+#Visualize movies_per_genreyear,
 fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear', size= 'movies_per_genreyear')
 fig7.set(xlabel="Year",ylabel="Movies per year")
 plt.show()
@@ -66,7 +67,6 @@ movies_genre_country=movies_genre_country.drop(index=[ 16,  22,  35,  45,  55,  
 tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts().reset_index(name='count')
 tot_per_genre=tot_per_genre.sort_values(by='count',ascending=False)
 #print(tot_per_genre)
-
 
 fig4=sns.barplot(tot_per_genre,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=17))
 fig4.set(xlabel="Number of countries",ylabel="Genre")
