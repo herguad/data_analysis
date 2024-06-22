@@ -44,6 +44,11 @@ fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear', 
 fig7.set(xlabel="Year",ylabel="Movies of different genres added per year")
 plt.show()
 
+#Filter years with over 8 movies added, which is the 2nd quartile as shown by describe(). Remove rows with genre 'International Movies'.
+pop_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
+pop_genre_year=pop_genre_year.drop(index=[75,76,77,78])
+print(pop_genre_year)
+
 #Which genre was the most popular each year? 
 pop_genre_year=movies_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
 #print(pop_genre_year)
@@ -56,10 +61,6 @@ fig8.set(xlabel="Year",ylabel="Movies per year")
 fig8.tick_params(labelsize=8)
 plt.show()
 
-#Filter years with over 8 movies added, which is the 2nd quartile as shown by describe(). Remove rows with genre 'International Movies'.
-pop_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
-pop_genre_year=pop_genre_year.drop(index=[75,76,77,78])
-#print(pop_genre_year)
 
 #Stats based on countries
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
