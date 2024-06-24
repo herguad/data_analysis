@@ -73,6 +73,8 @@ fig9.set(xlabel="Year",ylabel="Genre with max number of releases per year")
 fig9.tick_params(labelsize=8)
 plt.show()
 
+# What prop of the total movies from a certain genre was released each year?
+
 #Stats based on countries of origin for mvoies added each year.
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
 u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
