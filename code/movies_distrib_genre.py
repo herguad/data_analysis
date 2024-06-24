@@ -74,6 +74,9 @@ fig9.tick_params(labelsize=8)
 plt.show()
 
 # What prop of the total movies from a certain genre was released each year?
+genre_year_sum=filtered_genre_year.merge(genres_sum,on='genre',how='outer')
+genre_year_sum['prop_per_genre']=genre_year_sum['movies_per_genreyear']/genre_year_sum['sum']
+print(genre_year_sum)
 
 #Stats based on countries of origin for mvoies added each year.
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
