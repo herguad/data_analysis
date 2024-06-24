@@ -75,7 +75,7 @@ plt.show()
 
 # What prop of the total movies from a certain genre was released each year?
 genre_year_sum=filtered_genre_year.merge(genres_sum,on='genre',how='outer')
-genre_year_sum['prop_per_genre']=genre_year_sum['movies_per_genreyear']/genre_year_sum['sum']
+genre_year_sum['prop_per_genre']=((genre_year_sum['movies_per_genreyear']/genre_year_sum['sum'])*100).round(decimals=1)
 print(genre_year_sum)
 
 #Stats based on countries of origin for mvoies added each year.
