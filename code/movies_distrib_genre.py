@@ -25,7 +25,8 @@ movies_country_genre=movies_col_select.loc[:,('country','genre')]
 #Group movies by genre and year added, and count genres movies added per year. 
 movies_g_y_sum=movies_genre_year.groupby(["genre","year_added"]).value_counts(ascending=True).reset_index(name='movies_per_genreyear')
 print(movies_g_y_sum)
-#Group movies by country andgenre, and count genres movies added per country. 
+
+#Group movies by country and genre, and count genres movies added per country. 
 movies_g_c_sum=movies_country_genre.groupby(["country","genre"]).value_counts(ascending=True).reset_index(name='movies_per_countrygenre')
 print(movies_g_c_sum)
 
