@@ -50,13 +50,15 @@ pop_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
 pop_genre_year=pop_genre_year.drop(index=[75,76,77,78])
 print(pop_genre_year)
 
-
 #Visualize number of movies released per genre each year.
 fig8=sns.barplot(filtered_genre_year,x='year_added',y='movies_per_genreyear',hue='genre',palette=sns.set_palette('colorblind',n_colors=9))
 #fig8.set(yscale="log")
 fig8.set(xlabel="Year",ylabel="Movies per year")
 fig8.tick_params(labelsize=8)
 plt.show()
+
+#Find whether there's a correlation between genre and number of movies released each year . 
+genres_per_year=filtered_genre_year.groupby(['genre'])['movies_per_genreyear'].sum().reset_index(name='sum')
 
 #Which genre was the most popular each year? Considering only years with over 8 movies added.
 pop_genre_year=filtered_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
@@ -116,12 +118,5 @@ fig6=sns.barplot(pop_genre_sum,x='genre',y='movies_per_countrygenre',hue='genre'
 fig6.set(xlabel="Most popular genres",ylabel="Total number of movies")
 plt.show()
 
-#Find whether there's a correlation between genre and number of movies released each year . 
-genres_per_year=filtered_genre_year.groupby(['genre'])['movies_per_genreyear'].sum().reset_index(name='sum')
-
-#print(genres_per_year.head(20))
-#genres_years= genres_per_year[['genre','sum']]
-
-fig10 = sns.heatmap(genres_per_year) #<-- ValueError: could not convert string to float: 'Action'
-#Find whether there's a correlation between genre and country . --> sns. heatmap
-#Find whether there's a correlation between genre and continent . --> sns. heatmap
+#Find whether there's a correlation between genre and country .
+#Find whether there's a correlation between genre and continent . 
