@@ -58,7 +58,8 @@ fig8.tick_params(labelsize=8)
 plt.show()
 
 #Find whether there's a correlation between genre and number of movies released each year . 
-genres_per_year=filtered_genre_year.groupby(['genre'])['movies_per_genreyear'].sum().reset_index(name='sum')
+genres_per_year=filtered_genre_year.groupby(['genre'])['movies_per_genreyear'].sum().reset_index(name='sum').sort_values(by='sum',ascending=False)
+print(genres_per_year)
 
 #Which genre was the most popular each year? Considering only years with over 8 movies added.
 pop_genre_year=filtered_genre_year.groupby(['year_added'])[['genre','movies_per_genreyear']].max()
