@@ -75,6 +75,7 @@ uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies
 u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
 movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
 #print(movies_genre_country[movies_genre_country['genre']=='International Movies'].describe()) --> 31 rows from various countries
+
 #Separate international movies into a different df and remove from main.
 international_movies_c= movies_genre_country[movies_genre_country['genre']=='International Movies']
 #print(international_movies_c.index)
