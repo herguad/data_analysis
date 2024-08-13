@@ -87,7 +87,7 @@ fig2=sns.barplot(data=movies_counts,x="continent",y= "sum", hue='sum',palette=sn
 fig2.set(yscale="log")
 plt.xlim(-1,6)
 plt.ylim(1000,4600000)
-fig2.set(xlabel="Continent",ylabel="sum")
+fig2.set(xlabel="Continent",ylabel="Total sum of movies added per continent")
 fig2.tick_params(labelsize=8)
 plt.show()
 
