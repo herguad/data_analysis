@@ -56,8 +56,9 @@ fig1.set(yscale="log")
 plt.xlim(-1,25)
 plt.ylim(400,1500000)
 fig1.set_xticklabels(rotation=90)
-fig1.set(xlabel="Country",ylabel="Max movies released")
+fig1.set(xlabel="Country",ylabel="Max number of movies added that year")
 plt.show()
+
 
 ## The facetted plot shows a correlation between year_added and nationalities such that in 2020 half the countries were included for releases in 2020 and the other half in 2021. We can check this, manually, by selecting the rows of df  fro each year_added:
 added_2020=max_movies_over200[max_movies_over200["year_added"]==2020] #.shape shows 12 distinct countries
