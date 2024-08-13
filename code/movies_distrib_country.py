@@ -96,7 +96,7 @@ fig3=sns.barplot(data=movies_counts,x="continent",y= "mean", hue='mean',palette=
 fig3.set(yscale="log")
 plt.xlim(-1,6)
 plt.ylim(500,950000)
-fig3.set(xlabel="Continent",ylabel="Mean")
+fig3.set(xlabel="Continent",ylabel="Mean movies added per continent")
 fig3.tick_params(labelsize=8)
 plt.show()
 
