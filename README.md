@@ -9,7 +9,7 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 #### Subset the df to only see data about movies (not documentaries, series, or else) and pick only those columns of interest, i.e. title, country, genre, year released and duration.
 #### Filter out movies shorter than an hour.
 #### Iterate over the rows and assign a color to each member in a subset of genres (perhaps the most popular overall, see movies_distrib_genre) and others. Inspect the list to check.
-- Visualizing the results in a scatter plot to show whether duration and release year for these genres are correlated.
+- Visualize the results in a scatter plot to show whether duration and release year for these genres are correlated.
 
 
   
