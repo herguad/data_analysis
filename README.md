@@ -5,10 +5,10 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 
 ### Are movies getting shorter? 
 - Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
-#### After importing pandas and matplotlib.pyplot, read the .csv with the data and store it into a properly named df.
-#### Subset the df to only see data about movies (not documentaries, series, or else) and pick only those columns of interest, i.e. title, country, genre, year released and duration.
-#### Filter out movies shorter than an hour.
-#### Iterate over the rows and assign a color to each member in a subset of genres (perhaps the most popular overall, see movies_distrib_genre) and others. Inspect the list to check.
+#### - After importing pandas and matplotlib.pyplot, read the .csv with the data and store it into a properly named df. 
+#### - Subset the df to only see data about movies (not documentaries, series, or else) and pick only those columns of interest, i.e. title, country, genre, year released and duration.
+#### - Filter out movies shorter than an hour.
+#### - Iterate over the rows and assign a color to each member in a subset of genres (perhaps the most popular overall, see movies_distrib_genre) and others. Inspect the list to check.
 - Visualize the results in a scatter plot to show whether duration and release year for these genres are correlated.
 
 
