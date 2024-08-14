@@ -12,6 +12,7 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 #### Visualize the results in a scatter plot to show whether duration and release year for these genres are correlated.
 - Create a fig with appropriate style, size, edges, etc.
 - Plot duration vs release year. Scatterplot is good to see possible correlations overall.
+- Set titles and labels to the plot and show it.
   
 ### What is the distribution of added movies per genre? What are the top genres for movies added in the library?
 - Select and clean the data.
