@@ -6,6 +6,7 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 ### Are movies getting shorter? 
 - Exploring a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
 - Visualizing the results in a scatter plot to show whether duration and release year for these genres are correlated.
+#### After importing pandas and matplotlib.pyplot, 
   
 ### What is the distribution of added movies per genre? What are the top genres for movies added in the library?
 - Select and clean the data.
