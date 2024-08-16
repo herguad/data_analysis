@@ -48,4 +48,6 @@ plt.ylabel("Duration (min)")
 plt.show()
 
 # Are movies getting shorter?
-#answer = "maybe"
+#firstanswer = "maybe"
+
+#Try seaborn replot to check for accuracy.
