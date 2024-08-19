@@ -17,7 +17,7 @@ netflix_movies = netflix_subset[["title", "country", "genre", "release_year", "d
 short_movies = netflix_movies[netflix_movies.duration < 60]
 #print(short_movies.info)
 # Filter also for durations longer than 250 minutes to exclude outliers.
-netflix_movies=netflix_movies[netflix_movies.duration >= 60 and netflix_movies.duration < 250]
+netflix_movies=netflix_movies[(netflix_movies.duration >= 60) & (netflix_movies.duration < 250)]
 #print(netflix_movies.info)
 
 # Define an empty list
