@@ -61,3 +61,9 @@ fig0.set(xlabel="Release year",ylabel="Duration (min)")
 fig0.set(title="Movie duration by year of release")
 fig0.tick_params(labelsize=8)
 plt.show()
+
+#Consider only mean duration per year of release and plot.
+movies_duration=netflix_movies[['title','genre','release_year','duration']]
+movies_duration=movies_duration.groupby(['release_year'])['duration'].mean()
+
+print(movies_duration)
