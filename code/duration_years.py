@@ -28,7 +28,7 @@ for label, row in netflix_movies.iterrows() :
     if row["genre"] == "Children" :
         colors.append("green")
     elif row["genre"] == "Documentaries" :
-        colors.append("orange")
+        colors.append("black")
     elif row["genre"] == "Stand-Up":
         colors.append("red")
     else:
