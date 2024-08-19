@@ -64,6 +64,7 @@ plt.show()
 
 #Consider only mean duration per year of release and plot.
 movies_duration=netflix_movies[['title','genre','release_year','duration']]
-movies_duration=movies_duration.groupby(['release_year'])['duration'].mean()
-
-print(movies_duration)
+movies_duration=movies_duration.groupby(['release_year'])['duration'].mean().reset_index(name='mean')
+movies_duration=movies_duration.drop(movies_duration.index[0])
+movies_duration['mean']=round(movies_duration['mean'],2)
+#print(movies_duration)
