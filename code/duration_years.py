@@ -100,6 +100,7 @@ movies_duration['mean']=round(movies_duration['mean'],2)
 #print(movies_duration)
 
 #Plot mean duration per release_year
+#fig11=sns.lineplot(data=movies_duration,x='release_year',y='mean', estimator='mean', errorbar=('ci',95), n_boot=1000,err_style="band")
 fig11=sns.lineplot(data=movies_duration,x='release_year',y='mean')
 fig11.set(xlabel="Release year",ylabel="Mean duration (min)")
 fig11.set(title="Mean movie duration by year of release")
