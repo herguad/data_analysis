@@ -56,7 +56,7 @@ plt.show()
 
 #Try seaborn replot to check for accuracy.
 #palette=sns.color_palette('colorblind', n_colors=n_decades)
-fig0=sns.scatterplot(data=netflix_movies, x='release_year', y='duration', hue=colors_decades, palette=palette)
+fig0=sns.scatterplot(data=netflix_movies, x='release_year', y='duration')
 fig0.set(xlabel="Release year",ylabel="Duration (min)")
 fig0.set(title="Movie duration by year of release")
 fig0.tick_params(labelsize=8)
