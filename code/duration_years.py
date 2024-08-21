@@ -55,7 +55,7 @@ plt.show()
 #firstanswer = "maybe"
 
 #Try seaborn replot to check for accuracy.
-
+#palette=sns.color_palette('colorblind', n_colors=n_decades)
 fig0=sns.scatterplot(data=netflix_movies, x='release_year', y='duration', hue=colors_decades, palette=palette)
 fig0.set(xlabel="Release year",ylabel="Duration (min)")
 fig0.set(title="Movie duration by year of release")
@@ -93,7 +93,7 @@ color_dict=dict(zip(decades,distinct_colors))
 
 #Group df by decade (add column first or loop it to group). 
 #hue='decade'
-palette=sns.color_palette('colorblind', n_colors=n_decades)
+
 
 #Plot means in decades for different genres.
 
