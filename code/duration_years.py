@@ -112,3 +112,5 @@ fig11.set(title="Mean movie duration by year of release")
 fig11.tick_params(labelsize=8)
 plt.show()
 
+#heatmap: duration vs decade it was released
+#duration_genres=sns.heatmap()
