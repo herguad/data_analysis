@@ -94,6 +94,35 @@ decades=[1940,1950,1960,1970,1980,1990,2000,2010,2020]
 color_dict=dict(zip(decades,distinct_colors))
 #print(color_dict)
 
+duration_decade=netflix_movies[['release_year','duration']]
+list_years=duration_decade['release_year'].to_list()
+forties=[]
+fifties=[]
+sixties=[]
+seventies=eighties=[]
+nineties=[]
+noughties=[]
+tens=[]
+for v in list_years:
+    if int(v) <= 1950 :
+        forties.append(v)
+    elif int(v) <= 1960 :
+        fifties.append(v)
+    elif int(v) <= 1970 :
+        sixties.append(v)
+    elif int(v) <= 1980 :
+        seventies.append(v)
+    elif int(v) <= 1990 :
+        eighties.append(v)
+    elif int(v) <= 2000 :
+        nineties.append(v)
+    elif int(v) <= 2010:
+        noughties.append(v)
+    else:
+        tens.append(v)
+
+###TBC
+
 #Group by decade and plot mean for diffwerent genres.
 # Iterate over rows of release_year in netflix_movies:
 decades=[1940,1950,1960,1970,1980,1990,2000,2010,2020]
