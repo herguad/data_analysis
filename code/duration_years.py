@@ -62,6 +62,38 @@ fig0.set(title="Movie duration by year of release")
 fig0.tick_params(labelsize=8)
 plt.show()
 
+# Iterate over rows of release_year in netflix_movies:
+colors_decades=[]
+release_year=netflix_movies[['release_year']]
+for label, row in release_year.iterrows() :
+    if row["release_year"] <= 1950 :
+        colors_decades.append("blue")
+    elif  row["release_year"] <= 1960 :
+        colors_decades.append("orange")
+    elif  row["release_year"] <= 1970 :
+        colors_decades.append("green")
+    elif  row["release_year"] <= 1980 :
+        colors_decades.append("red")
+    elif  row["release_year"] <= 1990 :
+        colors_decades.append("violet")
+    elif  row["release_year"] <= 2000 :
+        colors_decades.append("brown")
+    elif row["release_year"] <= 2010:
+        colors_decades.append("lilac")
+    else:
+        colors.append("grey")
+
+#print(colors_decades[:10])
+
+#List of distinct colors.
+distinct_colors= list(set([decade for decade in colors_decades]))
+#print(distinct_colors)
+decades=[1940,1950,1960,1970,1980,1990,2000,2010,2020]
+
+#Dictionary of distict colors and decades
+color_dict=dict(zip(decades,distinct_colors))
+#print(color_dict)
+
 #Group by decade and plot mean for diffwerent genres.
 # Iterate over rows of release_year in netflix_movies:
 decades=[1940,1950,1960,1970,1980,1990,2000,2010,2020]
