@@ -152,7 +152,7 @@ uncateg=duration_genres[duration_genres['genre'] == 'Uncategorized']
 duration_genres=duration_genres.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 3253, 3736, 3737, 3738, 4187, 5576, 5577, 6735, 7170, 7171])
 #print(duration_genres.head())
 
-#Group subset df by genre and calculate mean duration for all genres. Order by descending mean_duration,i.e. genres with onger movies to shorter.
+#Group subset df by genre and calculate mean duration for all genres. Order by descending mean_duration,i.e. genres with longer movies to shorter.
 mean_dur_gen=duration_genres.groupby(['genre'])['duration'].mean('duration').reset_index(name='mean_duration')
 mean_dur_gen['mean_duration']=round(mean_dur_gen['mean_duration'],2)
 mean_dur_gen=mean_dur_gen.sort_values(by='mean_duration',ascending = False)
