@@ -155,6 +155,7 @@ duration_genres=duration_genres.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 
 #Group subset df by genre and calculate mean duration for all genres. Order by descending mean_duration,i.e. genres with onger movies to shorter.
 mean_dur_gen=duration_genres.groupby(['genre'])['duration'].mean('duration').reset_index(name='mean_duration')
 mean_dur_gen['mean_duration']=round(mean_dur_gen['mean_duration'],2)
+mean_dur_gen=mean_dur_gen.sort_values(by='mean_duration',ascending = False)
 print(mean_dur_gen)
 #heatmap: duration vs decade it was released
 #duration_genres=sns.heatmap()
