@@ -162,5 +162,12 @@ mean_dur_gen=mean_dur_gen.sort_values(by='mean_duration',ascending = False)
 top_means=mean_dur_gen.iloc[0:10,:]
 #print(top_means)
 
+#Plot to look for possible relations.
+fig12=sns.barplot(data=top_means,x='genre',y='mean_duration',hue='genre')
+fig12.set(xlabel="Genre",ylabel="Mean duration (min)")
+fig12.set(title="Mean movie duration by genre")
+fig12.tick_params(labelsize=8)
+plt.show()
+
 #heatmap: duration vs decade it was released
 #duration_genres=sns.heatmap()
