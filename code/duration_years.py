@@ -145,5 +145,13 @@ fig11.tick_params(labelsize=8)
 plt.show()
 
 #Subset df for genre and duration and drop rows with 'Uncategorized' genre.
+duration_genre=netflix_movies[(netflix_movies['duration'] >= 60)  & (netflix_movies['duration'] <= 180 )]
+duration_genres=duration_genre[['genre','duration']]
+uncateg=duration_genres[duration_genres['genre'] == 'Uncategorized']
+#print(uncateg.index)
+#Group subset df by genre and calculate mean duration for all genres.
+mean_dur_gen=duration_genres.groupby(['genre'])['duration'].mean('duration').reset_index(name='mean_duration')
+mean_dur_gen=round(mean_dur_gen['mean_duration'],2)
+print(mean_dur_gen)
 #heatmap: duration vs decade it was released
 #duration_genres=sns.heatmap()
