@@ -149,6 +149,9 @@ duration_genre=netflix_movies[(netflix_movies['duration'] >= 60)  & (netflix_mov
 duration_genres=duration_genre[['genre','duration']]
 uncateg=duration_genres[duration_genres['genre'] == 'Uncategorized']
 #print(uncateg.index)
+duration_genres=duration_genres.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 3253, 3736, 3737, 3738, 4187, 5576, 5577, 6735, 7170, 7171])
+#print(duration_genres.head())
+
 #Group subset df by genre and calculate mean duration for all genres.
 mean_dur_gen=duration_genres.groupby(['genre'])['duration'].mean('duration').reset_index(name='mean_duration')
 mean_dur_gen=round(mean_dur_gen['mean_duration'],2)
