@@ -25,17 +25,8 @@ netflix_movies=netflix_movies[(netflix_movies.duration >= 60) & (netflix_movies.
 uncategorized=netflix_movies[netflix_movies['genre'] == 'Uncategorized']
 #print(uncategorized.index)
 netflix_movies=netflix_movies.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 3253, 3736, 3737, 3738, 4187, 5576, 5577, 6735, 7170, 7171])
-# Iterate over rows of netflix_movies
-for label, row in netflix_movies.iterrows() :
-    if row["genre"] == "Children" :
-        colors.append("green")
-    elif row["genre"] == "Documentaries" :
-        colors.append("black")
-    elif row["genre"] == "Stand-Up":
-        colors.append("red")
-    else:
-        colors.append("purple")
-        
+#Identify unique genres, make a dictionary of unique genres and colors and build palette that includes all unique genres.
+
 # Inspect the first 10 values in your list        
 colors[:10]
 
