@@ -29,7 +29,7 @@ netflix_movies=netflix_movies.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 32
 genres=netflix_movies['genre'].unique()
 c_olors = ['maroon','cyan','purple','green','magenta','black','red','olive','purple','lime','pink','brown','orange','yellow','blue','navy','grey','beige']
 genre_color=dict(zip(genres,c_olors))
-print(genre_color)
+print(genre_color) #Check dictionary was built appropriately.
 
 colors=[]
 
