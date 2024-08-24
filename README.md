@@ -5,8 +5,8 @@ This analysis started as an assignment in DataCamp aimed at putting into practic
 - Would it be justified to correlate movie duration and year of release? 
 - What about duration and genre? Is genre correlated to duration?
 - Which genres got the most movies released in different years?
+- Which were the top 3 genres for movies released in different years?
 - 
-
 
 ## Movies in general
 
