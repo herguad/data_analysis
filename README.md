@@ -7,6 +7,7 @@ This analysis started as an assignment in DataCamp aimed at putting into practic
 - Which genres got the most movies released in different years?
 - Which were the top 3 genres for movies released in different years?
 - Which countries have the most released movies in different years? And which ones have the least?
+- What can be said about the gretaer and smaller number of releases per continent?
 
 ## Movies in general
 
