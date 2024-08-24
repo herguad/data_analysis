@@ -13,6 +13,7 @@ Once I began transcribing that project here, many questions came to mind. To the
 3. Focusing on countries and continents
 - Which countries have the most released movies in different years? And which ones have the least?
 - What can be said about the gretaer and smaller number of releases per continent?
+   What proportion of the total movies released each year does  each continent?
 
 ## Movies in general
 
