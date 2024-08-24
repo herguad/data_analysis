@@ -4,6 +4,8 @@ This is an analysis of Netflix database including a general analysis of Netflix 
 This analysis started as an assignment in DataCamp aimed at putting into practice the basics of data exploration. Originally, the general questioned posed was 'Are movies getting shorter?' but 'maybe' was an enough stisfying question to pass the assignment. Once I began copying the resoloution of that project here, many questions came to mind. To the original question, I've added:
 - Would it be justified to correlate movie duration and year of release? 
 - What about duration and genre? Is genre correlated to duration?
+- Which genres got the most movies released in different years?
+- 
 
 
 ## Movies in general
