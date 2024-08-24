@@ -40,7 +40,7 @@ for i in gen_re.values:
             colors.append(v)
         else:
             continue
-print(colors[:10])
+print(colors[:10]) # Inspect the first 10 values in your list        
 
 # Set the figure style and initalize a new figure
 fig = plt.figure(figsize=(12,8))
