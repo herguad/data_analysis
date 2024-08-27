@@ -76,10 +76,10 @@ movies_duration=movies_duration.drop(movies_duration.index[0])
 movies_duration['mean']=round(movies_duration['mean'],2)
 #print(movies_duration)
 
-fig11=sns.lineplot(data=movies_duration,x='release_year',y='mean', estimator='mean', errorbar=('ci',95), n_boot=1000,err_style="band")
+fig11=sns.lineplot(data=netflix_movies,x='release_year',y='duration',estimator='mean', errorbar=('ci',75), n_boot=1000)
 fig11.set(xlabel="Release year",ylabel="Mean duration (min)")
 fig11.set(title="Mean movie duration by year of release")
-fig11.tick_params(labelsize=8)
+fig11.tick_params(labelsize=7)
 plt.show()
 
 duration_genre=netflix_movies[(netflix_movies['duration'] >= 60)  & (netflix_movies['duration'] <= 180 )]
