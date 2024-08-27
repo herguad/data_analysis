@@ -15,8 +15,7 @@ Once I began transcribing that project here, many questions came to mind. To the
 - What can be said about the gretaer and smaller number of releases per continent?
 - How are the different continents represented as proportions of the total movies released each year?
 
-## 1.Movie duration
-
+## 1. Movie duration
 ### Are movies getting shorter? 
 #### Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
 - After importing pandas and matplotlib.pyplot, read the .csv with the data and store it into a properly named df.
@@ -46,7 +45,7 @@ Once I began transcribing that project here, many questions came to mind. To the
 - Finding the distribution of nationalities for movies included in Netflix library.
 - Visualizing the distribution and finding the most and least represented nationalities in Netflix library.
 
-## 3. 
+## 3. Countries and continents
 ### Are there changes in the distribution of nationalities of SouthA movies in Netflix in time?
 - Finding the total number of movies from South American countries included in Netflix library.
 - Visualizing the distribution and finding the most and least represented SouthAm countries in Netflix library.
