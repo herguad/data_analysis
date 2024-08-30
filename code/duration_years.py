@@ -14,6 +14,10 @@ netflix_subset = netflix_df[netflix_df["type"] == "Movie"]
 #print(netflix_df.info())
 #print(netflix_df.head(3))
 
+#data about movies (not documentaries, series, or else) and pick only those columns of interest, i.e. title, country, genre, year released and duration.
+#- Filter out movies shorter than an hour.
+#- Iterate over the rows and assign a color to each member in a subset of genres (perhaps the most popular overall, see movies_distrib_genre) and others. Inspect the list to check.
+
 # Select only the columns of interest
 netflix_movies = netflix_subset[["title", "country", "genre", "release_year", "duration"]]
 
