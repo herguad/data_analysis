@@ -26,7 +26,8 @@ Explore a Netflix dataset to show how specific genres (documentaries, children m
 - Subset the df to only see data about movies (not documentaries, series, or else) and pick only those columns of interest, i.e. title, country, genre, year released and duration.
 - Filter out movies shorter than an hour.
 - Iterate over the rows and assign a color to each member in a subset of genres (perhaps the most popular overall, see movies_distrib_genre) and others. Inspect the list to check.
-#### Visualize the results in a scatter plot to show whether duration and release year for these genres are correlated.
+#### Visualizing relations between variables
+Visualize the results in a scatter plot to show whether duration and release year for these genres are correlated.
 - Create a fig with appropriate style, size, edges, etc.
 - Plot duration vs release year. Scatterplot is good to see possible correlations overall.
 - Set titles and labels to the plot and show it.
