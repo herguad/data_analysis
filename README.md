@@ -20,7 +20,7 @@ Once I began transcribing that project here, many questions came to mind. To the
 4. 'Historical' analysis
 - How are the different genres distributed in time?
 - Which genres have gained relevance or lost it?
-- 
+- Has the distribution of movies changed in relation to continent and countries diversity?
 
 Below, I present the ((basic)) insights derived from observing possible relations between relevant features of the datasaet and the tools and methods I used to that aim.
 ## 1. Movie duration
