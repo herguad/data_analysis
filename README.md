@@ -38,7 +38,7 @@ A quick look over the shape, bsic info and first row of the df show +7 rows incl
 ![netflix_df_info](https://github.com/user-attachments/assets/19fce985-6aa0-4782-b2a4-61ac544c3ef6)
 
 To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning.
-
+[Your Title](your-project-name/tree/master/your-subfolder)
 Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
 - After importing pandas and matplotlib.pyplot, 
 - Subset the df to only see data about movies (not documentaries, series, or else) and pick only those columns of interest, i.e. title, country, genre, year released and duration.
