@@ -35,6 +35,7 @@ netflix_df = pd.read_csv(r'pathway\netflix_data.csv')
 ```
 A quick look over the shape, bsic info and first row of the df show +7 rows including info on genre, duration, release_year, cast and rating among the ten variables displayed as columns.
 
+![netflix_df_info](https://github.com/user-attachments/assets/19fce985-6aa0-4782-b2a4-61ac544c3ef6)
 
 
 Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
