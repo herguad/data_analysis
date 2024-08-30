@@ -10,6 +10,9 @@ netflix_df = pd.read_csv("netflix_data.csv")
 
 # Subset the DataFrame for type "Movie"
 netflix_subset = netflix_df[netflix_df["type"] == "Movie"]
+#print(netflix_df.shape)
+#print(netflix_df.info())
+#print(netflix_df.head(3))
 
 # Select only the columns of interest
 netflix_movies = netflix_subset[["title", "country", "genre", "release_year", "duration"]]
