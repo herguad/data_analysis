@@ -20,7 +20,8 @@ Once I began transcribing that project here, many questions came to mind. To the
 
 ## 1. Movie duration
 ### Are movies getting shorter? 
-#### Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
+#### Exploring the dataset
+Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
 - After importing pandas and matplotlib.pyplot, read the .csv with the data and store it into a properly named df.
 - Subset the df to only see data about movies (not documentaries, series, or else) and pick only those columns of interest, i.e. title, country, genre, year released and duration.
 - Filter out movies shorter than an hour.
