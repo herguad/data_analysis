@@ -22,13 +22,16 @@ Below, I present the ((basic)) insights derived from observing possible relation
 ## 1. Movie duration
 ### Are movies getting shorter? 
 #### Exploring the dataset
-After importing the encessary libraries and packages, I read the .csv with the data and store it into a properly named df.
+After importing the encessary libraries and packages, I loaded the dataset and stored it into a properly named df.
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+
+#Load netflix_data.csv as a DataFrame
+netflix_df = pd.read_csv(r'pathway\netflix_data.csv')
 ```
 
 Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
