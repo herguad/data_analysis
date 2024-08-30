@@ -24,7 +24,7 @@ Below, I present the ((basic)) insights derived from observing possible relation
 #### Exploring the dataset
 After importing the encessary libraries and packages, I read the .csv with the data and store it into a properly named df.
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
