@@ -24,12 +24,12 @@ Below, I present the ((basic)) insights derived from observing possible relation
 #### Exploring the dataset
 After importing the encessary libraries and packages, I read the .csv with the data and store it into a properly named df.
 
-'''
+```
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-'''
+```
 
 Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
 - After importing pandas and matplotlib.pyplot, 
