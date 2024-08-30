@@ -33,6 +33,9 @@ import seaborn as sns
 #Load netflix_data.csv as a DataFrame
 netflix_df = pd.read_csv(r'pathway\netflix_data.csv')
 ```
+A quick look over the shape, bsic info and first row of the df show +7 rows including info on genre, duration, release_year, cast and rating among the ten variables displayed as columns.
+
+
 
 Explore a Netflix dataset to show how specific genres (documentaries, children movies and stand up specials) relate to movies release years and their duration. 
 - After importing pandas and matplotlib.pyplot, 
