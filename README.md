@@ -1,4 +1,6 @@
 # Netflix data analysis
+
+<<DA \and Data Science>>
 This is an analysis of Netflix database including a general analysis of Netflix movie trends in time and specific analysis of data subsets aimed at answering various questions about, e.g. trends in movies from South American countries and more.
 
 This analysis started as an assignment in DataCamp aimed at putting into practice the basics of data exploration. Originally, the main question was 'Are movies getting shorter?' but 'maybe' was a satisfying enough answer to pass the assignment. 
