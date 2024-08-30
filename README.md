@@ -48,10 +48,12 @@ Subset the df to only include those variables of interest. Here the analysis spl
 3. [distribution per country and continent](da_viz/tree/master/code/movies_distrib_country.py)
 4. [distribution per genre](da_viz/tree/master/code/movies_distrib_genre.py)
 
-To assess questions in (1.) above, >>> description of duration_time workflow <<<<
+To assess questions in (1.) above, the df was subset by title, genre, release_year and duration. The movies under 60 minutes together with the movies with 'uncategorized' genre were out.
+
+>>> description of duration_time workflow <<<<
 #### Visualizing relations between variables
 
-Visualize the results in a scatter plot to show whether duration and release year for these genres are correlated.
+Visualize the results in a scatter plot to show whether duration and release year for these genres are meaningfully* related.
 - Create a fig with appropriate style, size, edges, etc.
 - Plot duration vs release year. Scatterplot is good to see possible correlations overall.
 - Set titles and labels to the plot and show it.
