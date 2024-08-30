@@ -44,9 +44,6 @@ Subset the df to only include those variables of interest. Here the analysis spl
 - [distribution per country and continent](da_viz/tree/master/code/movies_distrib_country.py)
 - [distribution per genre](da_viz/tree/master/code/movies_distrib_genre.py)
 
-data about movies (not documentaries, series, or else) and pick only those columns of interest, i.e. title, country, genre, year released and duration.
-- Filter out movies shorter than an hour.
-- Iterate over the rows and assign a color to each member in a subset of genres (perhaps the most popular overall, see movies_distrib_genre) and others. Inspect the list to check.
 #### Visualizing relations between variables
 Visualize the results in a scatter plot to show whether duration and release year for these genres are correlated.
 - Create a fig with appropriate style, size, edges, etc.
