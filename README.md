@@ -18,6 +18,7 @@ Once I began transcribing that project here, many questions came to mind. To the
 - What can be said about the gretaer and smaller number of releases per continent?
 - How are the different continents represented as proportions of the total movies released each year?
 
+Below, I present the ((basic)) insights derived from observing possible relations between relevant features of the datasaet and the tools and methods I used to that aim.
 ## 1. Movie duration
 ### Are movies getting shorter? 
 #### Exploring the dataset
