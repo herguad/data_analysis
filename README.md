@@ -65,9 +65,8 @@ To assess questions in 1/a, the df was subset by title, genre, release_year and 
 </p>
 
 To get a clearer idea of the distribution, plot the mean for the dataset using seaborn and specifing the hue argument for 'genre'.
-
 <p align="center">
-<img src="https://github.com/user-attachments/assets/1e36db76-c6e4-4450-ab74-80c981f6a61c">
+<img src="https://github.com/user-attachments/assets/c6088053-45f4-4268-8409-18ba2b962c6b">
 </p>
 ![mean_dur_genre]()
 
