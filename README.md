@@ -42,13 +42,17 @@ A quick look over the shape, basic info and first row of the df show +7 rows inc
 ![netflix_df_info](https://github.com/user-attachments/assets/cb591c1c-9f93-48ee-8649-fff3529309da)
 
 To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning. <br /> The complete analysis and validation of data types is [here](code/NaN_movies.py).<br />
-Subset the df to only include those variables of interest. Here the analysis splits into ((NUMBER)) files corresponding with the main questions:
+Subset the df to only include those variables of interest. Plot the data to look for possible outliers.
+
+
+
+Here the analysis splits into ((NUMBER)) files corresponding with the main questions:
 a. [distribution per duration](code/duration_years.py) 
 b. [distribution per release_year](code/movies_release.py)
 c. [distribution per country and continent](code/movies_distrib_country.py)
 d. [distribution per genre](code/movies_distrib_genre.py)
 
-To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes and over 250, together with the those marked as 'uncategorized' for genre, were filtered out. This dataset was initially visualized as two different scatterplots to get an idea of the distribution of movies duration in general and movies duration by genre.<br />
+To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes and over 180, together with the those marked as 'uncategorized' for genre, were filtered out. This dataset was initially visualized as two different scatterplots to get an idea of the distribution of movies duration in general and movies duration by genre.<br />
 [comment]: <> (width=640 height=400)
 <p align="center">
 <img src="https://github.com/user-attachments/assets/ab1a2b1c-8a86-4067-b17b-97951ccc9989">
@@ -57,7 +61,8 @@ To assess questions in 1/a, the df was subset by title, genre, release_year and 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/f42a5889-e928-481e-9dae-82ae1c6c1436">
 </p>
-![dur_rel])
+
+To get a clearer idea iof the distribution,plot the mean for the dataset using seaborn
 
 
 
