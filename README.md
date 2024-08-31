@@ -43,12 +43,12 @@ A quick look over the shape, bsic info and first row of the df show +7 rows incl
 
 To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning. <br /> The complete analysis and validation of data types is [here](code/NaN_movies.py).<br />
 Subset the df to only include those variables of interest. Here the analysis splits into ((NUMBER)) files corresponding with the main questions:
-1. [distribution per duration](da_viz/tree/master/code/duration_years.py) 
-2. [distribution per release_year](da_viz/tree/master/code/movies_release.py)
-3. [distribution per country and continent](da_viz/tree/master/code/movies_distrib_country.py)
-4. [distribution per genre](da_viz/tree/master/code/movies_distrib_genre.py)
+a. [distribution per duration](code/duration_years.py) 
+b. [distribution per release_year](code/movies_release.py)
+c. [distribution per country and continent](code/movies_distrib_country.py)
+d. [distribution per genre](code/movies_distrib_genre.py)
 
-To assess questions in (1.) above, the df was subset by title, genre, release_year and duration. The movies under 60 minutes together with the movies with 'uncategorized' genre were out.
+To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes together with the movies with 'uncategorized' genre were filtered out.
 
 >>> description of duration_time workflow <<<<
 #### Visualizing relations between variables
