@@ -37,9 +37,9 @@ import seaborn as sns
 #Load netflix_data.csv as a DataFrame
 netflix_df = pd.read_csv(r'pathway\netflix_data.csv')
 ```
-A quick look over the shape, bsic info and first row of the df show +7 rows including info on genre, duration, release_year, cast and rating among the ten variables displayed as columns.
+A quick look over the shape, basic info and first row of the df show +7 rows including info on genre, duration, release_year, cast and rating among the ten variables displayed as columns.
 
-![netflix_df_info](https://github.com/user-attachments/assets/19fce985-6aa0-4782-b2a4-61ac544c3ef6)
+![netflix_df_info](https://github.com/user-attachments/assets/cb591c1c-9f93-48ee-8649-fff3529309da)
 
 To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning. <br /> The complete analysis and validation of data types is [here](code/NaN_movies.py).<br />
 Subset the df to only include those variables of interest. Here the analysis splits into ((NUMBER)) files corresponding with the main questions:
@@ -49,8 +49,11 @@ c. [distribution per country and continent](code/movies_distrib_country.py)
 d. [distribution per genre](code/movies_distrib_genre.py)
 
 To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes and over 250, together with the those marked as 'uncategorized' for genre, were filtered out. This dataset was initially visualized as two different scatterplots to get an idea of the distribution of movies duration in general and movies duration by genre.
-![dur_rel_y](https://github.com/user-attach![dur_rel](https://github.com/user-attachments/assets/acab307a-ae68-4333-a383-dbb932a9276d)
-ments/assets/61e50676-b859-4755-b0d9-63e2f74edd24)
+![dur_rel_y](https://github.com/user-attachments/assets/ab1a2b1c-8a86-4067-b17b-97951ccc9989)
+
+
+![dur_rel](https://github.com/user-attachments/assets/f42a5889-e928-481e-9dae-82ae1c6c1436)
+
 
 >>> description of duration_time workflow <<<<
 #### Visualizing relations between variables
