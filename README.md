@@ -41,7 +41,7 @@ A quick look over the shape, bsic info and first row of the df show +7 rows incl
 
 ![netflix_df_info](https://github.com/user-attachments/assets/19fce985-6aa0-4782-b2a4-61ac544c3ef6)
 
-To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning. <br /> The complete analysis and validation of data types is [here](da_viz//code/NaN_movies.py).<br />
+To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning. <br /> The complete analysis and validation of data types is [here](da_viz/code/NaN_movies.py).<br />
 Subset the df to only include those variables of interest. Here the analysis splits into ((NUMBER)) files corresponding with the main questions:
 1. [distribution per duration](da_viz/tree/master/code/duration_years.py) 
 2. [distribution per release_year](da_viz/tree/master/code/movies_release.py)
