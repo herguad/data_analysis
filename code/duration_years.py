@@ -34,7 +34,7 @@ uncategorized=netflix_movies[netflix_movies['genre'] == 'Uncategorized']
 netflix_movies=netflix_movies.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 3253, 3736, 3737, 3738, 4187, 5576, 5577, 6735, 7170, 7171])
 #Identify unique genres, make a dictionary of unique genres and colors and build palette that includes all unique genres.
 genres=netflix_movies['genre'].unique()
-c_olors = ['maroon','cyan','purple','green','magenta','black','red','olive','purple','lime','pink','brown','orange','yellow','blue','navy','grey','beige']
+c_olors = ['purple','darkorange','lawngreen','tomato','magenta','lime','red','olive','maroon','royalblue','darkmagenta','brown','orange','yellow','gold','forestgreen','grey','turquoise']
 genre_color=dict(zip(genres,c_olors))
 print(genre_color) #Check dictionary was built appropriately.
 
@@ -67,8 +67,8 @@ plt.show()
 #firstanswer = "maybe"
 
 #Try seaborn replot to check for accuracy.
-#palette=sns.color_palette('colorblind')
-fig0=sns.scatterplot(data=netflix_movies, x='release_year', y='duration')
+
+fig0=sns.scatterplot(data=netflix_movies, x='release_year', y='duration', color='purple')
 fig0.set(xlabel="Release year",ylabel="Duration (min)")
 fig0.set(title="Movie duration by year of release")
 fig0.tick_params(labelsize=8)
