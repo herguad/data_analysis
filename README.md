@@ -55,7 +55,7 @@ To assess questions in 1/a, the df was subset by title, genre, release_year and 
 </p>
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/f42a5889-e928-481e-9dae-82ae1c6c1436" width="1024" height="768">
+<img src="https://github.com/user-attachments/assets/f42a5889-e928-481e-9dae-82ae1c6c1436" width="1536" height="754">
 </p>
 ![dur_rel])
 
