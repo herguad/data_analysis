@@ -48,7 +48,7 @@ b. [distribution per release_year](code/movies_release.py)
 c. [distribution per country and continent](code/movies_distrib_country.py)
 d. [distribution per genre](code/movies_distrib_genre.py)
 
-To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes together with the movies with 'uncategorized' genre were filtered out.
+To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes together with the movies with 'uncategorized' genre were filtered out. This dataset was initially visualized as a scatterplot to get an idea of the general dsitribution of movies duration.
 
 >>> description of duration_time workflow <<<<
 #### Visualizing relations between variables
