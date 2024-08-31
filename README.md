@@ -44,7 +44,6 @@ A quick look over the shape, basic info and first row of the df show +7 rows inc
 To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning. <br /> The complete analysis and validation of data types is [here](code/NaN_movies.py).<br />
 Subset the df to only include those variables of interest. Plot the data to look for possible outliers.
 
-![dur_rel_unfilt]()
 <p align="center">
 <img src="https://github.com/user-attachments/assets/ab1a2b1c-8a86-4067-b17b-97951ccc9989](https://github.com/user-attachments/assets/c4d5e02e-9f12-4a26-af17-f2d42a5c0f5b">
 </p>
