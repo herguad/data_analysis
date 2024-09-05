@@ -67,14 +67,11 @@ plt.show()
 # Are movies getting shorter?
 #firstanswer = "maybe"
 
-#Try seaborn replot to check for accuracy.
-
 fig0=sns.scatterplot(data=netflix_movies, x='release_year', y='duration', color='purple')
 fig0.set(xlabel="Release year",ylabel="Duration (min)")
 fig0.set(title="Movie duration by year of release")
 fig0.tick_params(labelsize=8)
 plt.show()
-
 
 
 #Consider only mean duration per year of release and plot.
