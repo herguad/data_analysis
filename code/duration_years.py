@@ -50,18 +50,11 @@ for i in gen_re.values:
             continue
 print(colors[:10]) # Inspect the first 10 values in your list        
 
-# Set the figure style and initalize a new figure
-fig = plt.figure(figsize=(12,8))
-
 # Create a scatter plot of duration versus release_year
-plt.scatter(netflix_movies.release_year, netflix_movies.duration, c=colors)
-
-# Create a title and axis labels
-plt.title("Movie Duration by Year of Release")
-plt.xlabel("Release year")
-plt.ylabel("Duration (min)")
-
-# Show the plot
+fig=sns.scatterplot(data=netflix_movies,x='release_year', y='duration',color='g')
+fig.set(xlabel="Release year",ylabel="Duration (min)")
+fig.set(title="Movie Duration by Release Year")
+fig.tick_params(labelsize=7)
 plt.show()
 
 # Are movies getting shorter?
@@ -74,8 +67,6 @@ fig0.set(xlabel="Release year",ylabel="Duration (min)")
 fig0.set(title="Movie duration by year of release")
 fig0.tick_params(labelsize=8)
 plt.show()
-
-
 
 #Consider only mean duration per year of release and plot.
 movies_duration=netflix_movies[['title','genre','release_year','duration']]
