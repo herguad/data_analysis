@@ -64,13 +64,11 @@ To assess questions in 1/a, the df was subset by title, genre, release_year and 
 <img src="https://github.com/user-attachments/assets/f42a5889-e928-481e-9dae-82ae1c6c1436">
 </p>
 
-To get a clearer idea of the distribution, plot the mean for the dataset using seaborn and specifing the hue argument for 'genre'.
+To get a clearer idea of the distribution, the mean for the dataset was plotted using seaborn and specifing the hue argument for 'genre'.
 <p align="center">
 <img src="https://github.com/user-attachments/assets/c6088053-45f4-4268-8409-18ba2b962c6b">
 </p>
-![mean_dur_genre]()
 
->>> description of duration_time workflow <<<<
 #### Visualizing relations between variables
 
 Visualize the results in a scatter plot to show whether duration and release year for these genres are meaningfully* related.
