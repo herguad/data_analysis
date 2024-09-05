@@ -90,9 +90,6 @@ mean_dur_gen['mean_duration']=round(mean_dur_gen['mean_duration'],2)
 mean_dur_gen=mean_dur_gen.sort_values(by='mean_duration',ascending = False)
 #print(mean_dur_gen)
 
-#Select top ten genres according to mean duration.
-top_means=mean_dur_gen.iloc[0:10,:]
-#print(top_means)
 #Plot to look for possible relations.
 fig12=sns.barplot(data=mean_dur_gen,x='genre',y='mean_duration',hue='genre')
 fig12.set(xlabel="Genre",ylabel="Mean duration (min)")
@@ -110,3 +107,6 @@ plt.show()
 #heatmap: duration vs decade it was released
 #duration_genres=sns.heatmap()
 
+#Select top ten genres according to mean duration.
+#top_means=mean_dur_gen.iloc[0:10,:]
+#print(top_means)
