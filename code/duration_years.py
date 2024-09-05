@@ -99,8 +99,14 @@ fig12.set(xlabel="Genre",ylabel="Mean duration (min)")
 fig12.set(title="Mean movie duration by genre")
 fig12.tick_params(labelsize=8)
 plt.show()
-#fig12=sns.relplot(data=duration_genre,row='genre', kind='line')
-#plt.show()
+
+#Plot mean duration vs year of release.
+fig13=sns.lineplot(data=movies_duration,x='release_year',y='mean',color='mediumvioletred')
+fig13.set(xlabel="Genre",ylabel="Mean duration (min)")
+fig13.set(title="Mean movie duration by year")
+fig13.tick_params(labelsize=8,rotation=40)
+plt.show()
+
 #heatmap: duration vs decade it was released
 #duration_genres=sns.heatmap()
 
