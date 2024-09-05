@@ -21,6 +21,13 @@ netflix_subset = netflix_df[netflix_df["type"] == "Movie"]
 # Select only the columns of interest
 netflix_movies = netflix_subset[["title", "country", "genre", "release_year", "duration"]]
 
+#Plot unfiltered data.
+fig0=sns.scatterplot(data=netflix_movies, x='release_year', y='duration', color='purple')
+fig0.set(xlabel="Release year",ylabel="Duration (min)")
+fig0.set(title="Movie duration by year of release")
+fig0.tick_params(labelsize=8)
+plt.show()
+
 # Filter for durations shorter than 60 minutes
 short_movies = netflix_movies[netflix_movies.duration < 60]
 #print(short_movies.info)
@@ -33,6 +40,7 @@ uncategorized=netflix_movies[netflix_movies['genre'] == 'Uncategorized']
 #print(uncategorized.index)
 
 netflix_movies=netflix_movies.drop(index=[1318, 1320, 1570, 1709, 2177, 2178, 3253, 3736, 3737, 3738, 4187, 5576, 5577, 6735, 7170, 7171])
+
 #Identify unique genres, make a dictionary of unique genres and colors and build palette that includes all unique genres.
 genres=netflix_movies['genre'].unique()
 c_olors = ['purple','darkorange','lawngreen','tomato','magenta','lime','red','olive','maroon','royalblue','darkmagenta','brown','orange','yellow','gold','forestgreen','grey','turquoise']
@@ -50,29 +58,15 @@ for i in gen_re.values:
             continue
 print(colors[:10]) # Inspect the first 10 values in your list        
 
-# Set the figure style and initalize a new figure
-fig = plt.figure(figsize=(12,8))
-
 # Create a scatter plot of duration versus release_year
-plt.scatter(netflix_movies.release_year, netflix_movies.duration, c=colors)
-
-# Create a title and axis labels
-plt.title("Movie Duration by Year of Release")
-plt.xlabel("Release year")
-plt.ylabel("Duration (min)")
-
-# Show the plot
+fig=sns.scatterplot(data=netflix_movies,x='release_year', y='duration',color='g')
+fig.set(xlabel="Release year",ylabel="Duration (min)")
+fig.set(title="Movie Duration by Release Year")
+fig.tick_params(labelsize=7)
 plt.show()
 
 # Are movies getting shorter?
 #firstanswer = "maybe"
-
-fig0=sns.scatterplot(data=netflix_movies, x='release_year', y='duration', color='purple')
-fig0.set(xlabel="Release year",ylabel="Duration (min)")
-fig0.set(title="Movie duration by year of release")
-fig0.tick_params(labelsize=8)
-plt.show()
-
 
 #Consider only mean duration per year of release and plot.
 movies_duration=netflix_movies[['title','genre','release_year','duration']]
