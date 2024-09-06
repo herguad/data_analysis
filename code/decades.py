@@ -79,7 +79,7 @@ for i in netflix_movies['release_year']:
     else:
         netflix_movies.iloc[index_i,5] = 2010
 
-print(netflix_movies.head(50))
+print(netflix_movies.head())
 
 
 #Group df by decade (add column first or loop it to group). 
