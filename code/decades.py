@@ -83,6 +83,11 @@ print(netflix_movies.head(50))
 
 
 #Group df by decade (add column first or loop it to group). 
-#hue='decade'
+
+#Plot means in decades for different genres.
+fig=sns.lineplot(data=netflix_decades,x='decade', y='duration',estimator='mean',hue='duration')
+fig.set(xlabel="Release year",ylabel="Mean duration (min)")
+fig.set(title="Mean movie duration by year of release")
+fig.tick_params(labelsize=7)
 
 #Plot means in decades for different genres.
