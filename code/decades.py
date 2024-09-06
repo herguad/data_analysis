@@ -49,6 +49,8 @@ decades=[1940,1950,1960,1970,1980,1990,2000,2010,2020]
 color_dict=dict(zip(decades,distinct_colors))
 #print(color_dict)
 
+#Loop over year column, identify row index, assign corresponding decade value to decade column for that row index.
+
 #Group df by decade (add column first or loop it to group). 
 #hue='decade'
 
