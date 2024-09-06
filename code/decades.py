@@ -57,7 +57,30 @@ netflix_movies=netflix_movies.reset_index(drop=True)
 
 #index_= netflix_movies.loc[netflix_movies['release_year'] == 2003].index
 #print(index_)
-print(type(netflix_movies.loc[3,'release_year']))
+print(type(netflix_movies.loc[3,'release_year'])
+      
+#Loop over year column, identify row index, assign corresponding decade value to decade column for that row index.
+for i in netflix_movies['release_year']:
+    index_i= netflix_movies.loc[netflix_movies['release_year'] == i].index
+    if i < 1950 :
+        netflix_movies.iloc[index_i,5] = 1940
+    elif i < 1960 :
+        netflix_movies.iloc[index_i,5] = 1950
+    elif i < 1970 :
+        netflix_movies.iloc[index_i,5] = 1960
+    elif i < 1980 :
+        netflix_movies.iloc[index_i,5] = 1970
+    elif i < 1990 :
+        netflix_movies.iloc[index_i,5] = 1980
+    elif i < 2000 :
+        netflix_movies.iloc[index_i,5] = 1990
+    elif i < 2010:
+        netflix_movies.iloc[index_i,5] = 2000
+    else:
+        netflix_movies.iloc[index_i,5] = 2010
+
+print(netflix_movies.head(50))
+
 
 #Group df by decade (add column first or loop it to group). 
 #hue='decade'
