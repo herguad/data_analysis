@@ -49,6 +49,16 @@ decades=[1940,1950,1960,1970,1980,1990,2000,2010,2020]
 color_dict=dict(zip(decades,distinct_colors))
 #print(color_dict)
 
+#Add an empty 'decade' column to the df.
+netflix_movies['decade']=['' for i in range(len(netflix_movies))]
+print(range(len(netflix_movies)))
+
+netflix_movies=netflix_movies.reset_index(drop=True)
+
+#index_= netflix_movies.loc[netflix_movies['release_year'] == 2003].index
+#print(index_)
+print(type(netflix_movies.loc[3,'release_year']))
+
 #Group df by decade (add column first or loop it to group). 
 #hue='decade'
 
