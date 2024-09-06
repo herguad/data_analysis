@@ -82,7 +82,8 @@ for i in netflix_movies['release_year']:
 print(netflix_movies.head(50))
 
 
-#Group df by decade (add column first or loop it to group). 
+#Subset columns and plot duration vs decade.
+netflix_decades=netflix_movies[['genre','release_year','duration','decade']]
 #hue='decade'
 
 #Plot means in decades for different genres.
