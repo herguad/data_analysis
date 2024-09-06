@@ -53,7 +53,7 @@ c. [distribution per country and continent](code/movies_distrib_country.py)
 d. [distribution per genre](code/movies_distrib_genre.py)
 
 To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes and over 180, together with the those marked as 'uncategorized' for genre, were filtered out. This dataset was initially visualized as two different scatterplots to get an idea of the distribution of movies duration in general and movies duration by genre.<br />
-[comment]: <> (width=640 height=400)
+
 <p align="center">
 <img src="images/dur_rel_filt.png">
 </p>
@@ -67,7 +67,12 @@ To get a clearer idea of the distribution, the mean for the dataset was plotted 
 <img src="images/mean_dur_genre.png">
 </p>
 
-#### Visualizing relations between variables
+While there seems to be a tendency of movies on Netflix to be shorter in time, only a proper statistical analysis taking into account all relevant variables could yield a meaninful answer to the question whether movies overall have been getting shorter. As rergards the question about possible correlations between genres and duration of the movie, the barplot showing mean duration of the movie per genres shows clear differences between all the genres consider in general and specifically between, for example, action movies or dramas, and documentaries or children's movies.
+
+## 2. Movie genre
+Moving on with genres in particular,
+- Which genres got the most movies released in different years?
+- Which were the top 3 genres for movies released in different years?
 
 Visualize the results in a scatter plot to show whether duration and release year for these genres are meaningfully* related.
 - Create a fig with appropriate style, size, edges, etc.
