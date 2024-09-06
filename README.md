@@ -57,16 +57,16 @@ d. [distribution per genre](code/movies_distrib_genre.py)
 To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes and over 180, together with the those marked as 'uncategorized' for genre, were filtered out. This dataset was initially visualized as two different scatterplots to get an idea of the distribution of movies duration in general and movies duration by genre.<br />
 [comment]: <> (width=640 height=400)
 <p align="center">
-<img src="images/dur_rel_unfilt.png">
+<img src="images/dur_rel_filt.png">
 </p>
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/f42a5889-e928-481e-9dae-82ae1c6c1436">
+<img src="images/dur_rel.png">
 </p>
 
 To get a clearer idea of the distribution, the mean for the dataset was plotted using seaborn and specifing the hue argument for 'genre'.
 <p align="center">
-<img src="https://github.com/user-attachments/assets/c6088053-45f4-4268-8409-18ba2b962c6b">
+<img src="images/mean_dur_genre.png">
 </p>
 
 #### Visualizing relations between variables
