@@ -83,7 +83,9 @@ print(netflix_movies.head())
 
 
 
-#Group df by decade (add column first or loop it to group). 
+#Subset columns and plot duration vs decade.
+netflix_decades=netflix_movies[['genre','release_year','duration','decade']]
+
 
 #Plot means in decades for different genres.
 fig=sns.lineplot(data=netflix_decades,x='decade', y='duration',estimator='mean',hue='duration')
