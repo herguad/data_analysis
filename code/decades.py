@@ -79,8 +79,17 @@ for i in netflix_movies['release_year']:
     else:
         netflix_movies.iloc[index_i,5] = 2010
 
-print(netflix_movies.head(50))
+print(netflix_movies.head())
 
+
+
+#Group df by decade (add column first or loop it to group). 
+
+#Plot means in decades for different genres.
+fig=sns.lineplot(data=netflix_decades,x='decade', y='duration',estimator='mean',hue='duration')
+fig.set(xlabel="Release year",ylabel="Mean duration (min)")
+fig.set(title="Mean movie duration by year of release")
+fig.tick_params(labelsize=7)
 
 
 #Plot means in decades for different genres.
