@@ -82,7 +82,5 @@ for i in netflix_movies['release_year']:
 print(netflix_movies.head(50))
 
 
-#Group df by decade (add column first or loop it to group). 
-#hue='decade'
 
 #Plot means in decades for different genres.
