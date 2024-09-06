@@ -1,4 +1,4 @@
-# Netflix data analysis
+# Data Analysis: the Netflix database
 
 This is an analysis of a freely available Netflix database exploring movie trends in time and including a specific analysis of data subsets aimed at answering various questions about, e.g. trends in movies genre, origin, duration and more.
 
