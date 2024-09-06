@@ -91,7 +91,8 @@ netflix_decades=netflix_movies[['genre','release_year','duration','decade']]
 fig=sns.lineplot(data=netflix_decades,x='decade', y='duration',estimator='mean',hue='duration')
 fig.set(xlabel="Release year",ylabel="Mean duration (min)")
 fig.set(title="Mean movie duration by year of release")
-fig.tick_params(labelsize=7)
+fig.tick_params(labelsize=9)
+plt.show()
 
 
 #Plot means in decades for different genres.
