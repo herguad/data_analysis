@@ -42,8 +42,10 @@ print(movies_genre_year['genre'].unique()) # <- 18 distinct genres after cleanin
 
 #Visualize df.
 palette=sns.set_palette('bright',n_colors=18)
-fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear', size= 'movies_per_genreyear')
-fig7.set(xlabel="Year",ylabel="Movies of different genres added per year")
+fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear',size='movies_per_genreyear',palette=palette,hue='genre',legend=False)
+fig7.set(xlabel="Year",ylabel="Total movie count per year")
+fig7.set(title="Movies of different genres released per year")
+
 plt.show()
 
 #Filter years with over 8 movies added, which is the 2nd quartile as shown by describe(). Remove rows with genre 'International Movies'.
