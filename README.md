@@ -73,7 +73,7 @@ While there seems to be a tendency of movies on Netflix to be shorter in time, o
 Moving on with genres in particular, the first cleaning and filtering provides a proper dataset to start analysing the distribution and possible correlations between movie genre and other variables. In this case, apart from the 'uncategorized' genre, the 'International Movies' values are also filtered out to avoid vague categories representing only a small proportion of total values. 
 
 <p align="center">
-<img src="">
+<img src="images/tot_movies_genre.png">
 </p>
 
 - Which genres got the most movies released in different years?
