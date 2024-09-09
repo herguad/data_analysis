@@ -76,7 +76,7 @@ Moving on with genres in particular, the first cleaning and filtering provides a
 <img src="images/tot_movies_genre.png">
 </p>
 
-Both `size` and **hue** were set to represent the number of movies released each year per genre but the **legend** arg was set to False to avoid cluttering the overview of the data.
+Among seaborn.scatterplot, both `size` and `hue` were set to represent the number of movies released each year per genre but the `legend` was set to False to avoid cluttering the overview of the data.
 - Which genres got the most movies released in different years?
 - Which were the top 3 genres for movies released in different years?
 
