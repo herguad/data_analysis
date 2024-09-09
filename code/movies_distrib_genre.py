@@ -40,7 +40,8 @@ print(movies_genre_year)
 
 print(movies_genre_year['genre'].unique()) # <- 18 distinct genres after cleaning
 
-#Visualize movies_per_genreyear,
+#Visualize df.
+palette=sns.set_palette('bright',n_colors=18)
 fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear', size= 'movies_per_genreyear')
 fig7.set(xlabel="Year",ylabel="Movies of different genres added per year")
 plt.show()
