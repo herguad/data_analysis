@@ -6,7 +6,7 @@ This analysis started as an assignment in DataCamp meant as practice of data exp
 The aim of this project is to explore possible trends in the platform movie db and produce hypotheses regarding the variables involved. A separate but complementary project will deal with the testing of some of them.
 ## Dataset
 The [dataset](data/netflix_data.csv) was downloaded from [kaggle](https://www.kaggle.com/datasets/shivamb/netflix-shows) and consists of +7500 media included in Netflix's catalog up until 2021. Each observation conssists of values for the media's genre, title, description, cast, director, duration, etc.
-Once I began transcribing that project here, many questions came to mind. To the original question, I've added the following.
+To the original question, I've added the following.
 1. Focusing on movie duration
 - Would it be justified to correlate movie duration and year of release? 
 - Is genre correlated to duration?
