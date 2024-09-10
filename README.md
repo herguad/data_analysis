@@ -22,7 +22,7 @@ To the original question, I've added the following.
 - Which genres have gained relevance or lost it?
 - Has the distribution of movies changed in relation to continent and countries diversity?
 
-Below, I present the ((basic)) insights derived from observing possible relations between relevant features of the datasaet and the tools and methods I used to that aim.
+Below are the insights derived from observing possible relations between relevant features of the dataset and the tools and methods I used to that aim.
 
 ## 1. Movie duration
 ### Are movies getting shorter? 
