@@ -86,8 +86,9 @@ To analyse the popular genres, i.e. to answer the two main questions for genre d
 To get an idea of the trends for the different genres by year of release, a barplot provides a good overview esp. with `hue` argument specified for genre.
 
 <p align="center">
-<img src="">
+<img src="images/genres_year.png">
 </p>
+
 - Which genres got the most movies released in different years?
 - Which were the top 3 genres for movies released in different years?
 
