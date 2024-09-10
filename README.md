@@ -77,6 +77,10 @@ Moving on with genres in particular, the first cleaning and filtering provides a
 </p>
 
 Among `seaborn.scatterplot` arguments, both `size` and `hue` were specified to represent the number of movies released each year per genre but the `legend` was set to `False` to avoid cluttering the overview of the data.
+
+To analyse the most popular genres, i.e. to answer the two main questions for genre distribution, I filtered out genres with fewer than 8 movies, which is the number representing the 2Q as shown by .describe().
+
+
 - Which genres got the most movies released in different years?
 - Which were the top 3 genres for movies released in different years?
 
