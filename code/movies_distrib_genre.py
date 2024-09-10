@@ -49,17 +49,18 @@ fig7.tick_params(labelsize=9)
 plt.show()
 
 #Filter years with over 8 movies added, which is the 2nd quartile as shown by describe(). Remove rows with genre 'International Movies'.
-pop_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
-pop_genre_year=pop_genre_year.drop(index=[75,76,77,78])
-print(pop_genre_year)
+print(round(movies_genre_year['movies_per_genreyear'].describe(),2))
+
+filtered_genre_year=movies_genre_year[movies_genre_year['movies_per_genreyear']>8]
+filtered_genre_year=filtered_genre_year.drop(index=[75,76,77,78])
+print(filtered_genre_year['genre'].unique()) #<--- 9 distinct genres with over 8 movies released.
 
 #Visualize number of movies released per genre each year.
-fig8=sns.barplot(filtered_genre_year,x='year_added',y='movies_per_genreyear',hue='genre',palette=sns.set_palette('colorblind',n_colors=9))
-#fig8.set(yscale="log")
+palette1=sns.set_palette('colorblind',n_colors=9)
+fig8=sns.barplot(filtered_genre_year,x='year_added',y='movies_per_genreyear',hue='genre',palette=palette1)
 fig8.set(xlabel="Year",ylabel="Movies per year")
 fig8.tick_params(labelsize=8)
 plt.show()
-
 #Find whether there's a correlation between genre and number of movies released each year . 
 genres_per_year=filtered_genre_year.groupby(['genre'])['movies_per_genreyear'].sum().reset_index(name='sum').sort_values(by='sum',ascending=False)
 print(genres_per_year)
