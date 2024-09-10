@@ -83,10 +83,11 @@ genre_year_sum['prop_per_genre']=((genre_year_sum['movies_per_genreyear']/genre_
 genre_year_prop=genre_year_sum.drop(['sum','movies_per_genreyear'],axis=1)
 print(genre_year_prop)
 
-###CHANGE FOR CATPLOT
-fig10=sns.scatterplot(genre_year_sum,x='year_added',y='genre',size='prop_per_genre',hue='genre',palette=sns.set_palette('deep',n_colors=9))
+fig10=sns.relplot(genre_year_sum,x='year_added',y='proportion',hue='genre',size='proportion',sizes=(15, 150),palette=sns.set_palette('deep',n_colors=9))
 fig10.set(xlabel="Year",ylabel="Proportion of genre relative to all movies added that year")
-fig10.tick_params(labelsize=8)
+plt.ylim(0,55)
+fig10.set(title="Genre representation per year")
+fig10.tick_params(labelsize=9)
 plt.show()
 
 #Stats based on countries of origin for mvoies added each year.
