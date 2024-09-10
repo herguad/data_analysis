@@ -81,11 +81,9 @@ Among `seaborn.scatterplot` arguments, both `size` and `hue` were specified to r
 - Which were the top 3 genres for movies released in different years?
 
 Visualize the results in a scatter plot to show whether duration and release year for these genres are meaningfully* related.
-- Create a fig with appropriate style, size, edges, etc.
-- Plot duration vs release year. Scatterplot is good to see possible correlations overall.
-- Set titles and labels to the plot and show it.
+
   
-### What is the distribution of added movies per genre? What are the top genres for movies added in the library?
+### What is the distribution of movies per genre? What are the top genres for movies added in the library?
 - Select and clean the data.
 - Count number of movies per genre added to Netflix library.
 - Plot total sums per genre and select those with sums over median (pop genres).
