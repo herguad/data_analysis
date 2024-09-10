@@ -93,7 +93,11 @@ To get an idea of the trends for the different genres by year of release, a barp
 </p>
 Grouping the filtered df by genre and adding a column with the total sum of movies of each genre every year and then filtering for the max values provide a way to plot the popular genres per year.
 <p align="center">
-<img src="images/genres_year.png">
+<img src="images/tot_movies_genre.png">
+</p>
+
+<p align="center">
+<img src="images/prop_genre_year.png">
 </p>
 
 - Which genres got the most movies released in different years?
