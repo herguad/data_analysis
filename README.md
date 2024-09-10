@@ -80,7 +80,7 @@ Among `seaborn.scatterplot` arguments, both `size` and `hue` were specified to r
 
 To analyse the most popular genres, i.e. to answer the two main questions for genre distribution, I filtered out genres with fewer than 8 movies, which is the number representing the 2Q as shown by .describe().
 <p align="center">
-<img src="images/genre_describe.png" width=300 length=200>
+<img src="images/genre_describe.png" width=420 length=280>
 </p>
 
 - Which genres got the most movies released in different years?
