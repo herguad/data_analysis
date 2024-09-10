@@ -9,7 +9,7 @@ The [dataset](data/netflix_data.csv) was downloaded from [kaggle](https://www.ka
 Once I began transcribing that project here, many questions came to mind. To the original question, I've added the following.
 1. Focusing on movie duration
 - Would it be justified to correlate movie duration and year of release? 
-- What about duration and genre? Is genre correlated to duration?
+- Is genre correlated to duration?
 2. Focusing on genre
 - Which genres got the most movies released in different years?
 - Which were the top 3 genres for movies released in different years?
