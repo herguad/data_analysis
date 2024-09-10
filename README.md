@@ -78,7 +78,7 @@ Moving on with genres in particular, the first cleaning and filtering provides a
 
 Among `seaborn.scatterplot` arguments, both `size` and `hue` were specified to represent the number of movies released each year per genre but the `legend` was set to `False` to avoid cluttering the overview of the data.
 
-To analyse the most popular genres, i.e. to answer the two main questions for genre distribution, I filtered out genres with fewer than 8 movies, which is the number representing the 2Q as shown by .describe().
+To analyse the popular genres, i.e. to answer the two main questions for genre distribution, I filtered out genres with fewer than 8 movies, which is the number representing the 2Q as shown with `.describe()`.
 <p align="center">
 <img src="images/genre_describe.png" width=360 length=240>
 </p>
