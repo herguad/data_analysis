@@ -87,7 +87,6 @@ To analyse the most popular genres, i.e. to answer the two main questions for ge
 - Which were the top 3 genres for movies released in different years?
 
 Visualize the results in a scatter plot to show whether duration and release year for these genres are meaningfully* related.
-
   
 ### What is the distribution of movies per genre? What are the top genres for movies added in the library?
 - Select and clean the data.
