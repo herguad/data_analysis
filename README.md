@@ -1,8 +1,9 @@
 # Data Analysis: the Netflix database
 
-This is an analysis of a freely available Netflix database exploring movie trends in time and including a specific analysis of data subsets aimed at answering various questions about, e.g. trends in movies genre, origin, duration and more.
+This is an analysis of a Netflix database exploring movie trends in time and including a specific analysis of data subsets aimed at answering various questions about, e.g. trends in movies genre, origin, duration and more.
 
 This analysis started as an assignment in DataCamp meant as practice of data exploration. Originally, the main question was 'Are movies getting shorter?'.
+The aim of this project is to explore possible trends in the platform movie db and produce hypotheses regarding the variables involved. A separate but complementary project will deal with the testing of some of them.
 
 Once I began transcribing that project here, many questions came to mind. To the original question, I've added the following.
 1. Focusing on movie duration
@@ -21,6 +22,7 @@ Once I began transcribing that project here, many questions came to mind. To the
 - Has the distribution of movies changed in relation to continent and countries diversity?
 
 Below, I present the ((basic)) insights derived from observing possible relations between relevant features of the datasaet and the tools and methods I used to that aim.
+
 ## 1. Movie duration
 ### Are movies getting shorter? 
 #### Exploring the dataset
