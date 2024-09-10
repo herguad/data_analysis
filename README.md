@@ -5,7 +5,7 @@ This is an analysis of a Netflix database exploring movie trends in time and inc
 This analysis started as an assignment in DataCamp meant as practice of data exploration. Originally, the main question was 'Are movies getting shorter?'.
 The aim of this project is to explore possible trends in the platform movie db and produce hypotheses regarding the variables involved. A separate but complementary project will deal with the testing of some of them.
 ## Dataset
-The Netflix database was downloaded from [kaggle](https://www.kaggle.com/datasets/shivamb/netflix-shows) The [dataset](data/netflix_data.csv) consists of 500 customers across United States, Germany and Australia who have made 1000 transactions with their invoice based on available 3 plans: Basic, Standard and Premium. Content and Stream has 500 instances each.
+The [dataset](data/netflix_data.csv) was downloaded from [kaggle](https://www.kaggle.com/datasets/shivamb/netflix-shows) and consists of +7500 media included in Netflix's catalog up until 2021. Each observation conssists of values for the media's genre, title, description, cast, director, duration, etc.
 Once I began transcribing that project here, many questions came to mind. To the original question, I've added the following.
 1. Focusing on movie duration
 - Would it be justified to correlate movie duration and year of release? 
