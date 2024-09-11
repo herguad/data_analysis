@@ -102,7 +102,7 @@ When comparing the last two plots it's evident that while some genres didn't get
 However, as expected, only certain genres become better represented in different years and the genres accumulating additions in the last years remain the same in the past years. This can be better appreciated by plotting the total count of movies added for genres with the max number of movies added per year, which shows.
 
 <p align="center">
-<img src="images/top3_genre_year.png">
+<img src="images/top3_genres_year.png">
 </p>
 
 Overall, only five genres represent the max number of movies aded since 2014.
