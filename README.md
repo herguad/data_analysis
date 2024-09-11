@@ -108,7 +108,7 @@ However, as expected, only certain genres become better represented in different
 Overall, only five genres represent the max number of movies aded since 2014.
 
 <p align="center">
-<img src="images/top_genres_movie.png">
+<img src="images/top_genres_movie_count.png">
 </p>
 
 ## 3. Countries and continents
