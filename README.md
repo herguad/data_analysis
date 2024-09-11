@@ -11,8 +11,8 @@ To the original question, I've added the following.
 - Would it be justified to correlate movie duration and year of release? 
 - Is genre correlated to duration?
 2. Focusing on genre
-- Which genres got the most movies released in different years?
-- Which were the top 3 genres for movies released in different years?
+- Which genres got the most movies added in different years?
+- Has Netflix been expanding the range of genres for movies in their library?
 3. Focusing on countries and continents
 - Which countries have the most released movies in different years? And which ones have the least?
 - What can be said about the greater and smaller number of releases per continent?
@@ -98,7 +98,8 @@ To see how different genres are represented within Netflix's catalog, subset col
 <img src="images/prop_genre_year.png">
 </p>
 
-When comparing the last two plots it's evident that while some genres didn't get as many movies added on specific years, they might represent a large proportion of additions for that year, as is the case of thrillers in 2019 or classic movies in 2019-2020.
+When comparing the last two plots it's evident that while some genres didn't get as many movies added on specific years, they might represent a large proportion of additions for that year, as is the case of thrillers in 2019 or classic movies in 2019-2020. This provides a 'yes' answer to the question whether Netflix has been expanding genres. 
+However, as expected, only certain genres become better represented in different years and the genres accumulating additions in the last years remain the same in the past years. This can be better appreciated .
 
 - Which genres got the most movies released in different years?
 - Which were the top 3 genres for movies released in different years?
