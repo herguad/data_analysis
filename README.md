@@ -15,7 +15,7 @@ To the original question, I've added the following.
 - Which were the top 3 genres for movies released in different years?
 3. Focusing on countries and continents
 - Which countries have the most released movies in different years? And which ones have the least?
-- What can be said about the gretaer and smaller number of releases per continent?
+- What can be said about the greater and smaller number of releases per continent?
 - How are the different continents represented as proportions of the total movies released each year?
 4. 'Historical' analysis
 - How are the different genres distributed in time?
@@ -98,16 +98,10 @@ To see how different genres are represented within Netflix's catalog, subset col
 <img src="images/prop_genre_year.png">
 </p>
 
+When comparing the last two plots it's evident that while some genres didn't get as many movies added on specific years, they might represent a large proportion of additions for that year, as is the case of thrillers in 2019 or classic movies in 2019-2020.
+
 - Which genres got the most movies released in different years?
 - Which were the top 3 genres for movies released in different years?
-
-Visualize the results in a scatter plot to show whether duration and release year for these genres are meaningfully* related.
-  
-### What is the distribution of movies per genre? What are the top genres for movies added in the library?
-- Select and clean the data.
-- Count number of movies per genre added to Netflix library.
-- Plot total sums per genre and select those with sums over median (pop genres).
-- Plot pop genres counts per genre.
 
 ### Has Netflix been expanding the range of genres of movies in their library?
 
