@@ -86,15 +86,13 @@ To analyse the popular genres, i.e. to answer the two main questions for genre d
 <img src="images/genre_describe.png" width=360 length=240>
 </p>
 
-To get an idea of the trends for the different genres by year of release, a barplot provides a good overview esp. with `hue` argument specified for genre.
+To get an idea of the trends for the different genres by year of release, a barplot provides a good overview esp. with `hue` argument specified for genre. Grouping the filtered df by genre and adding a column with the total sum of movies of each genre every year and then filtering for the max values provide a way to plot the popular genres per year.
 
 <p align="center">
 <img src="images/genres_year.png">
 </p>
-Grouping the filtered df by genre and adding a column with the total sum of movies of each genre every year and then filtering for the max values provide a way to plot the popular genres per year.
-<p align="center">
-<img src="images/tot_movies_genre.png">
-</p>
+
+To see how different genres are represented within Netflix's catalog, subset columns ..., add a proportion coolumn and plot with hue and size representing genres and proportions respectively.
 
 <p align="center">
 <img src="images/prop_genre_year.png">
