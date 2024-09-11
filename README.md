@@ -92,12 +92,15 @@ To get an idea of the trends for the different genres by year of release, a barp
 <img src="images/genres_year.png">
 </p>
 
-To see how different genres are represented within Netflix's catalog, subset columns ..., add a proportion coolumn and plot with hue and size representing genres and proportions respectively.
+To see how different genres are represented within Netflix's catalog, subset relevant columns, add a proportion column and plot with hue and size representing genres and proportions respectively. Given the low numbers for years earlier than 2014 and after 2020, those values can be filtered out so proportions are clearer.
 
 <p align="center">
 <img src="images/prop_genre_year.png">
 </p>
 
+<p align="center">
+<img src="images/filt_prop_gen_y.png">
+</p>
 When comparing the last two plots it's evident that while some genres didn't get as many movies added on specific years, they might represent a large proportion of additions for that year, as is the case of thrillers in 2019 or classic movies in 2019-2020. This provides a 'yes' answer to the question whether Netflix has been expanding genres. 
 However, as expected, only certain genres become better represented in different years and the genres accumulating additions in the last years remain the same in the past years. This can be better appreciated by plotting the total count of movies added for genres with the max number of movies added per year, which shows.
 
