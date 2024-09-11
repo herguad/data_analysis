@@ -99,16 +99,17 @@ To see how different genres are represented within Netflix's catalog, subset col
 </p>
 
 When comparing the last two plots it's evident that while some genres didn't get as many movies added on specific years, they might represent a large proportion of additions for that year, as is the case of thrillers in 2019 or classic movies in 2019-2020. This provides a 'yes' answer to the question whether Netflix has been expanding genres. 
-However, as expected, only certain genres become better represented in different years and the genres accumulating additions in the last years remain the same in the past years. This can be better appreciated by plotting the total count of movies added for genres with over half the total movies added in any year (30).
+However, as expected, only certain genres become better represented in different years and the genres accumulating additions in the last years remain the same in the past years. This can be better appreciated by plotting the total count of movies added for genres with the max number of movies added per year, which shows.
 
-- Which genres got the most movies released in different years?
-- Which were the top 3 genres for movies released in different years?
+<p align="center">
+<img src="images/top3_genre_year.png">
+</p>
 
-### Has Netflix been expanding the range of genres of movies in their library?
+Overall, only five genres represent the max number of movies aded since 2014.
 
-- Perform general data analysis to see which years saw the greatest increase in added movies to Netflix library.
-- Analyse a subset of the data for those years (2020, 2021) to get idea of trends these past years.
-- Analyse the dataset and find out what the general distirbution is for movies of different continents.
+<p align="center">
+<img src="images/top_genres_movie.png">
+</p>
 
 ## 3. Countries and continents
 ### Has Netflix been expanding the range of nationalities of movies in their library?
