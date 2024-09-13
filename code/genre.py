@@ -108,6 +108,7 @@ fig10.set(title="Genre representation per year")
 fig10.tick_params(labelsize=9)
 plt.show()
 
+
 #Stats based on countries of origin for mvoies added each year.
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
 u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
