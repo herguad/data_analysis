@@ -115,6 +115,11 @@ genre_year_prop_f=genre_year_prop[genre_year_prop['proportion'] >= 25].reset_ind
 #print(len(genre_year_prop_f['genre'].unique()))
 #print(genre_year_prop_f.head())
 
+palette3=sns.set_palette('colorblind',n_colors=17)
+fig11=sns.catplot(genre_year_prop_f,x='proportion',y='genre',col='year_added',col_wrap=2,hue='genre',kind='bar')
+fig11.set(xlabel="Proportion of genre relative to all movies added that year",ylabel="Genre")
+fig11.tick_params(labelsize=8)
+plt.show()
 
 #Stats based on countries of origin for mvoies added each year.
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
