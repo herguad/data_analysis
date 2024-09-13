@@ -111,6 +111,9 @@ However, as expected, only certain genres become better represented in different
 
 After checking the distribution of means with `describe()`, the df can be filtered for genres with means between 2Q and 3Q, e.g. 25. A faceted barplot with year for columns is telling about the influx of different genres each each and perhaps an effort to have a more balanced distribution in the last years.
 
+<p align="center">
+<img src="images/most_rep_genres.png">
+</p>
 
 ## 3. Countries and continents
 ### Has Netflix been expanding the range of nationalities of movies in their library?
