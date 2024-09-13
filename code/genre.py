@@ -99,8 +99,9 @@ genre_year_sum['prop_per_genre']=((genre_year_sum['movies_per_genreyear']/genre_
 genre_year_sum=genre_year_sum.rename(columns={'prop_per_genre':'proportion'})
 genre_year_prop=genre_year_sum.drop(['sum','movies_per_genreyear'],axis=1)
 #print(genre_year_prop)
+#print(len(genre_year_prop['genre'].unique()))
 
-fig10=sns.relplot(genre_year_prop,x='year_added',y='proportion',hue='genre',size='proportion',sizes=(10, 150),palette=sns.set_palette('deep',n_colors=9))
+fig10=sns.relplot(genre_year_prop,x='year_added',y='proportion',hue='genre',size='proportion',sizes=(10, 150),palette=sns.set_palette('deep',n_colors=17))
 fig10.set(xlabel="Year",ylabel="Proportion of genre relative to all movies added that year")
 plt.ylim(0,50)
 fig10.set(title="Genre representation per year")
