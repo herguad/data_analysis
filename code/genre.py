@@ -108,6 +108,13 @@ fig10.set(title="Genre representation per year")
 fig10.tick_params(labelsize=9)
 plt.show()
 
+#Filter genres with < 25 of genre_year_prop
+#print(genre_year_prop.describe()) # 2Q=20 3Q=29
+
+genre_year_prop_f=genre_year_prop[genre_year_prop['proportion'] >= 25].reset_index(drop=True)
+#print(len(genre_year_prop_f['genre'].unique()))
+#print(genre_year_prop_f.head())
+
 
 #Stats based on countries of origin for mvoies added each year.
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
