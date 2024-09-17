@@ -95,10 +95,6 @@ To get an idea of the trends for the different genres by year of release, a barp
 To see how different genres are represented within Netflix's catalog, subset relevant columns, add a proportion column and plot with hue and size representing genres and proportions respectively. Given the low numbers for years earlier than 2014 and after 2020, those values can be filtered out so proportions are clearer.
 
 <p align="center">
-<img src="images/prop_genre_year.png">
-</p>
-
-<p align="center">
 <img src="images/filt_prop_gen_y.png">
 </p>
 
