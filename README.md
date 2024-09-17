@@ -109,7 +109,7 @@ However, as expected, only certain genres become better represented in different
 <img src="images/top_genres_movie_count.png">
 </p>
 
-After checking the distribution of means with `describe()`, the df can be filtered for genres with avgs between 2Q and 3Q values, e.g. 25. A faceted barplot with year for columns shows the influx of different genres each year,displaying a more balanced distribution in the last years.
+After checking the distribution of means with `describe()`, the df can be filtered for genres with avgs between 2Q and 3Q values, e.g. 25. A faceted barplot with year for columns shows the influx of movies from different genres each year, displaying a more balanced distribution in the last years.
 
 <p align="center">
 <img src="images/most_rep_genres.png">
