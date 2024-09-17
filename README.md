@@ -103,13 +103,13 @@ To see how different genres are represented within Netflix's catalog, subset rel
 </p>
 
 When comparing the last two plots it's evident that while some genres didn't get as many movies added on specific years, they might represent a large proportion of additions for that year, as is the case of thrillers in 2019 or classic movies in 2019-2020. This provides a 'yes' answer to the question whether Netflix has been expanding genres. 
-However, as expected, only certain genres become better represented in different years and the genres accumulating additions in the last years remain the same in the past years. This can be better appreciated by plotting the total count of movies added for genres with the max number of movies added per year, which shows. Overall, only five genres represent the max number of movies added since 2014.
+However, as expected, only certain genres become better represented in different years and the genres accumulating additions in the last years remain the same in the past years. This can be better appreciated by plotting the total count of movies added for genres with the max number of movies added per year. Overall, only five genres represent the max number of movies added since 2014.
 
 <p align="center">
 <img src="images/top_genres_movie_count.png">
 </p>
 
-After checking the distribution of means with `describe()`, the df can be filtered for genres with means between 2Q and 3Q, e.g. 25. A faceted barplot with year for columns is telling about the influx of different genres each each and perhaps an effort to have a more balanced distribution in the last years.
+After checking the distribution of means with `describe()`, the df can be filtered for genres with avgs between 2Q and 3Q values, e.g. 25. A faceted barplot with year for columns shows the influx of different genres each each and perhaps an effort to have a more balanced distribution in the last years.
 
 <p align="center">
 <img src="images/most_rep_genres.png">
