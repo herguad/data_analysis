@@ -8,7 +8,7 @@ import seaborn as sns
 import awoc
 # Initialize the AWOC class.
 my_world = awoc.AWOC()
-# Let's retrieve the full list of nations of Europe.
+# Retrieve the full list of nations of Europe.
 countries_of_africa=my_world.get_countries_list_of('Africa')
 countries_of_south_america=my_world.get_countries_list_of('South America')
 countries_of_north_america=my_world.get_countries_list_of('North America')
