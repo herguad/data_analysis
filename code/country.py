@@ -43,6 +43,8 @@ movies_country_tot=tot_movies_country.rename(columns={"country":"movie_count"})
 movies_country_tot=movies_country_tot.sort_values(by="movies_per_country",ascending=False)
 #print(movies_country_tot.head())
 
+#What are the max numbers of total movies released and their countries?
+movies_country_tot=movies_country_tot.sort_values(by="movie_count",ascending=False).reset_index()
 #List continents, make a continents_country dictionary including only countries with movies in Netflix db.
 keys_set = ['Africa','Asia','Europe','N_America','S_America','Oceania']
 continents_country={key : [] for key in keys_set}
