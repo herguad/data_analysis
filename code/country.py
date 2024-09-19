@@ -110,3 +110,12 @@ plt.show()
 
 #Drop USA row to get better scales plots fro all the rest of the countries.
 movies_country_tot=movies_country_tot.drop([0,])
+
+palette3=sns.color_palette('muted', n_colors=7)
+fig4=sns.catplot(data=movies_country_tot,x='country',y='movie_count',kind='bar',errorbar='ci',col='continent',col_wrap=2,hue='continent',palette=palette3)
+fig4.set(yscale="log")
+#plt.xlim(-1,6)
+plt.xlim(-1,75)
+fig4.set(xlabel="Country",ylabel="Total movies added")
+fig4.tick_params(labelsize=5,rotation=90)
+plt.show()
