@@ -114,7 +114,11 @@ After checking the distribution of means with `describe()`, the df can be filter
 ## 3. Countries and continents
 In order to get more detailed observations and explore global tendencies in geographical representation in movies added to Netflix's library, all countries were grouped by continent. Since this grouping is not included in the database the [AWOC](https://pypi.org/project/a-world-of-countries/) library was included and used to incorporate the info to the df. <br />
 Once the data was cleaned and properly filtered,the dataset includes observations on 11 variables but the df to analize subsets them down to a df with only 2 columns: country and year_added.
-Grouping df by country, a count df shows the movie count per country.
+Grouping df by country, a general plot shows how overall movies added each year varied in two decades.
+<p align="center">
+<img src="">
+</p>
+
 
 ### Has Netflix been expanding the range of nationalities of movies in their library?
 
