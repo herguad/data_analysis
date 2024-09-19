@@ -62,7 +62,9 @@ for i in movies_country_tot["country"]:
     elif i in countries_of_oceania:
         continents_country['Oceania'].append(i)
     else:
-        print(i) #Clean miscategorized <---<---<---<--- United Arab West Germany Soviet Union
+        print(i)
+        index_= movies_country_tot.loc[movies_country_tot['country'] == i].index
+        print(index_) #Clean miscategorized <---<---<---<--- United Arab West Germany Soviet Union
 
 #Add an empty 'continent' column to the movies_country_tot df.
 movies_country_tot['continent']=['' for i in range(0,74)]
