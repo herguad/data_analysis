@@ -82,15 +82,15 @@ for i in movies_country_tot['country'].values:
 print(movies_country_tot.head(3))
 
 ###DROP inexistent countries
-#Aggregate movies per continent in a new df. Sort df by sum for clearer plot.
-movies_counts=movies_country_tot.groupby('continent')['movies_per_country'].agg(['sum','mean']).reset_index()
+
+movies_counts=movies_country_tot.groupby('continent')['movie_count'].agg(['sum','mean']).reset_index()
 movies_counts=movies_counts.drop(movies_counts.index[0])
 movies_counts['mean']=round(movies_counts['mean'])
 movies_counts=movies_counts.sort_values(by='sum',ascending=True)
+print(movies_counts.head(4))
 
-#Visualizing the distributions and finding the most and least represented nationalities in Netflix library.
-#Movies count per continent
-fig2=sns.barplot(data=movies_counts,x="continent",y= "sum", hue='sum',palette=sns.color_palette('deep', n_colors=6))
+palette1=sns.color_palette('deep', n_colors=6)
+fig2=sns.barplot(data=movies_counts,x="continent",y= "sum", hue='sum',palette=palette1)
 fig2.set(yscale="log")
 plt.xlim(-1,6)
 plt.ylim(1000,4600000)
