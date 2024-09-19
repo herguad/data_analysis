@@ -99,12 +99,12 @@ fig2.tick_params(labelsize=8)
 plt.show()
 
 #Mean movies count per continent
-fig3=sns.barplot(data=movies_counts,x="continent",y= "mean", hue='mean',palette=sns.color_palette('colorblind', n_colors=6))
+palette2=sns.color_palette('colorblind', n_colors=6)
+fig3=sns.barplot(data=movies_counts,x="continent",y= "mean", hue='mean',palette=palette2)
 fig3.set(yscale="log")
 plt.xlim(-1,6)
 plt.ylim(500,950000)
 fig3.set(xlabel="Continent",ylabel="Mean movies added per continent")
 fig3.tick_params(labelsize=8)
 plt.show()
-
 
