@@ -45,6 +45,8 @@ movies_country_tot=movies_country_tot.sort_values(by="movies_per_country",ascend
 
 #What are the max numbers of total movies released and their countries?
 movies_country_tot=movies_country_tot.sort_values(by="movie_count",ascending=False).reset_index()
+#print(movies_country_tot.info)
+
 #List continents, make a continents_country dictionary including only countries with movies in Netflix db.
 keys_set = ['Africa','Asia','Europe','N_America','S_America','Oceania']
 continents_country={key : [] for key in keys_set}
@@ -63,7 +65,7 @@ for i in movies_country_tot["country"]:
     elif i in countries_of_oceania:
         continents_country['Oceania'].append(i)
     else:
-        print('dunno')
+        print(i) #Clean miscategorized <---<---<---<--- United Arab West Germany Soviet Union
 
 #Add an empty 'continent' column to the movies_country_tot df.
 movies_country_tot['continent']=['' for i in range(0,74)]
