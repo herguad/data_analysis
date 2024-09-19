@@ -78,8 +78,10 @@ for i in movies_country_tot['country'].values:
             movies_country_tot.iloc[index_i,2]= k
         else:
             continue
-#print(movies_country_tot)
 
+print(movies_country_tot.head(3))
+
+###DROP inexistent countries
 #Aggregate movies per continent in a new df. Sort df by sum for clearer plot.
 movies_counts=movies_country_tot.groupby('continent')['movies_per_country'].agg(['sum','mean']).reset_index()
 movies_counts=movies_counts.drop(movies_counts.index[0])
