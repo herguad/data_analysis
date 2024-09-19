@@ -80,12 +80,15 @@ for i in movies_country_tot['country'].values:
         else:
             continue
 
-print(movies_country_tot.head(3))
+#print(movies_country_tot)
 
-###DROP inexistent countries
+###DROP currently inexistent countries.
+
+movies_country_tot=movies_country_tot.drop(index=[28,63,67])
+#print(movies_country_tot)
 
 movies_counts=movies_country_tot.groupby('continent')['movie_count'].agg(['sum','mean']).reset_index()
-movies_counts=movies_counts.drop(movies_counts.index[0])
+#print(movies_counts)
 movies_counts['mean']=round(movies_counts['mean'])
 movies_counts=movies_counts.sort_values(by='sum',ascending=True)
 print(movies_counts.head(4))
