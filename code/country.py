@@ -108,3 +108,5 @@ fig3.set(xlabel="Continent",ylabel="Mean movies added per continent")
 fig3.tick_params(labelsize=8)
 plt.show()
 
+#Drop USA row to get better scales plots fro all the rest of the countries.
+movies_country_tot=movies_country_tot.drop([0,])
