@@ -40,9 +40,6 @@ movies_country_year=movies_col_select.loc[:,('country','year_added')]
 tot_movies_country=movies_country_year.groupby("country")[["country"]].count()
 movies_country_tot=tot_movies_country.rename(columns={"country":"movie_count"})
 
-movies_country_tot=movies_country_tot.sort_values(by="movies_per_country",ascending=False)
-#print(movies_country_tot.head())
-
 #What are the max numbers of total movies released and their countries?
 movies_country_tot=movies_country_tot.sort_values(by="movie_count",ascending=False).reset_index()
 #print(movies_country_tot.info)
