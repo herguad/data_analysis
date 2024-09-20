@@ -124,6 +124,10 @@ To analize distribution per continent, a new df was built by matching awoc info 
 <img src="images/sum_continent.png">
 </p>
 Comparing with the corresponding averages per continent, representation seems to shift the order for least represented continents (Oceania and Africa) but the divide between these and North America is still wide.
+<p align="center">
+<img src="images/mean_continent.png">
+</p>
+
 ### Has Netflix been expanding the range of nationalities of movies in their library?
 
 ### Are the movies included in Netflix library evenly distributed by nationality?
