@@ -93,6 +93,8 @@ movies_counts['mean']=round(movies_counts['mean'])
 movies_counts=movies_counts.sort_values(by='sum',ascending=True)
 print(movies_counts.head(4))
 
+sns.set(font_scale=1)
+
 palette1=sns.color_palette('deep', n_colors=6)
 fig2=sns.barplot(data=movies_counts,x="continent",y= "sum", hue='sum',palette=palette1)
 fig2.set(yscale="log")
@@ -115,6 +117,7 @@ plt.show()
 #Drop USA row to get better scales plots fro all the rest of the countries.
 movies_country_tot=movies_country_tot.drop([0,])
 
+sns.set(font_scale=0.85)
 palette3=sns.color_palette('muted', n_colors=6)
 fig4=sns.catplot(data=movies_country_tot,x='movie_count',y='country',kind='bar',errorbar='ci',col='continent',col_wrap=2,hue='continent',palette=palette3)
 fig4.set(xscale="log")
