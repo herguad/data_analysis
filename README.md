@@ -133,8 +133,3 @@ Comparing with the corresponding averages per continent, representation seems to
 
 ### Are the movies included in Netflix library evenly distributed by nationality?
 
-### Are there changes in the distribution of nationalities of SouthA movies in Netflix in time?
-- Finding the total number of movies from South American countries included in Netflix library.
-- Visualizing the distribution and finding the most and least represented SouthAm countries in Netflix library.
-
-
