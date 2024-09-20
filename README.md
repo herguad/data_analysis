@@ -119,7 +119,11 @@ Grouping df by country, a general plot shows how overall movies added each year 
 <img src="">
 </p>
 
-
+To analize distribution per continent, a new df was built by matching awoc info with the netflix dataset. A countplot shows that the total number of movies added per contient varies between just and .
+<p align="center">
+<img src="images/sum_continent.png">
+</p>
+Comparing with the corresponding averages per continent, representation seems to shift the order for least represented continents (Oceania and Africa) but the divide between these and North America is still wide.
 ### Has Netflix been expanding the range of nationalities of movies in their library?
 
 ### Are the movies included in Netflix library evenly distributed by nationality?
