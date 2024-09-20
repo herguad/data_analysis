@@ -113,7 +113,10 @@ After checking the distribution of means with `describe()`, the df can be filter
 
 ## 3. Countries and continents
 In order to get more detailed observations and explore global tendencies in geographical representation in movies added to Netflix's library, all countries were grouped by continent. Since this grouping is not included in the database the [AWOC](https://pypi.org/project/a-world-of-countries/) library was included and used to incorporate the info to the df. <br />
-Once the data was cleaned and properly filtered,the dataset includes observations on 11 variables but the df to analize subsets them down to a df with only 2 columns: country and year_added.
+Once the data was cleaned and properly filtered,the dataset includes observations on 11 variables but the df to analize subsets them down to a df with only the necessary (year_added,country).
+
+### Has Netflix been expanding the range of nationalities of movies in their library?
+
 Grouping df by country, a general plot shows how overall movies added each year varied in two decades.
 <p align="center">
 <img src="">
@@ -123,12 +126,10 @@ To analize distribution per continent, a new df was built by matching awoc info 
 <p align="center">
 <img src="images/sum_continent.png">
 </p>
-Comparing with the corresponding averages per continent, representation seems to shift the order for least represented continents (Oceania and Africa) but the divide between these and North America is still wide.
+Comparing with the corresponding averages per continent, representation seems to shift the order for least represented continents (Oceania and South America) but the divide between these and North America is still wide.
 <p align="center">
 <img src="images/mean_continent.png">
 </p>
-
-### Has Netflix been expanding the range of nationalities of movies in their library?
 
 ### Are the movies included in Netflix library evenly distributed by nationality?
 - Finding the distribution of nationalities for movies included in Netflix library.
