@@ -131,7 +131,7 @@ Comparing with the corresponding averages per continent, representation seems to
 <img src="images/mean_continent.png">
 </p>
 
-To take a closer look at distribution by continent, a properly scaled boxplot shows data from disfferent continents should be cleaned individually to properly represent distribution in each contient.
+To take a closer look at distribution by continent, a boxplot shows that better represented continents not only include movies from a greater number of nationalities but also the individual number of additions per country is greater in most cases.
 
 <p align="center">
 <img src="">
