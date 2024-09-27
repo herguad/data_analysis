@@ -136,3 +136,5 @@ To take a closer look at distribution by continent, a properly scaled boxplot sh
 <p align="center">
 <img src="">
 </p>
+
+For instance, Europe Asia and South America display outliers affecting counts differntly: either because of the number of outliers (low or high) and how clustered they appear to be.
