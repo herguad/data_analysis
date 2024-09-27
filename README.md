@@ -134,7 +134,7 @@ Comparing with the corresponding averages per continent, representation seems to
 To take a closer look at distribution by continent, a boxplot shows that better represented continents not only include movies from a greater number of nationalities but also the individual number of additions per country is greater in most cases.
 
 <p align="center">
-<img src="">
+<img src="images/continent_distrib.png">
 </p>
 
 For instance, Europe Asia and South America display outliers affecting counts differntly: either because of the number of outliers (low or high) and how clustered they appear to be.
