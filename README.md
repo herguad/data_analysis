@@ -132,3 +132,7 @@ Comparing with the corresponding averages per continent, representation seems to
 </p>
 
 To take a closer look at distribution by continent, a properly scaled boxplot shows data from disfferent continents should be cleaned individually to properly represent distribution in each contient.
+
+<p align="center">
+<img src="">
+</p>
