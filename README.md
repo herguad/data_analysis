@@ -131,5 +131,5 @@ Comparing with the corresponding averages per continent, representation seems to
 <img src="images/mean_continent.png">
 </p>
 
-### Are the movies included in Netflix library evenly distributed by nationality?
+tO TAKE A CLOSER LOOK AT DISTRIBUTION PER CONTINEN, A BOXPLOT SHOWS TH
 
