@@ -131,5 +131,4 @@ Comparing with the corresponding averages per continent, representation seems to
 <img src="images/mean_continent.png">
 </p>
 
-tO TAKE A CLOSER LOOK AT DISTRIBUTION PER CONTINEN, A BOXPLOT SHOWS TH
-
+To take a closer look at distribution by continent, a properly scaled boxplot shows data from disfferent continents should be cleaned individually to properly represent distribution in each contient.
