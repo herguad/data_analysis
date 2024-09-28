@@ -111,3 +111,10 @@ fig13.set(xlabel="Genre",ylabel="Mean duration (min)")
 fig13.set(title="Mean movie duration by year")
 fig13.tick_params(labelsize=8,rotation=40)
 plt.show()
+
+#heatmap: duration vs decade it was released
+#duration_genres=sns.heatmap()
+
+#Select top ten genres according to mean duration.
+#top_means=mean_dur_gen.iloc[0:10,:]
+#print(top_means)
