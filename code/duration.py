@@ -59,7 +59,8 @@ for i in gen_re.values:
 print(colors[:10]) # Inspect the first 10 values in your list        
 
 # Create a scatter plot of duration versus release_year
-fig=sns.scatterplot(data=netflix_movies,x='release_year', y='duration',color='g')
+palette=sns.color_palette("tab10",n_colors=18)
+fig=sns.scatterplot(data=netflix_movies,x='release_year', y='duration',hue="genre",palette=palette,legend="brief")
 fig.set(xlabel="Release year",ylabel="Duration (min)")
 fig.set(title="Movie Duration by Release Year")
 fig.tick_params(labelsize=7)
@@ -68,14 +69,15 @@ plt.show()
 # Are movies getting shorter?
 #firstanswer = "maybe"
 
+
 #Consider only mean duration per year of release and plot.
 movies_duration=netflix_movies[['title','genre','release_year','duration']]
 movies_duration=movies_duration.groupby(['release_year'])['duration'].mean().reset_index(name='mean')
 movies_duration=movies_duration.drop(movies_duration.index[0])
 movies_duration['mean']=round(movies_duration['mean'],2)
-#print(movies_duration)
+#print(movies_duration.head())
 
-fig11=sns.lineplot(data=netflix_movies,x='release_year',y='duration',estimator='mean', errorbar=('ci',75), n_boot=1000)
+fig11=sns.lineplot(data=netflix_movies,x='release_year',y='duration',estimator='mean', errorbar=('ci',95), n_boot=1000)
 fig11.set(xlabel="Release year",ylabel="Mean duration (min)")
 fig11.set(title="Mean movie duration by year of release")
 fig11.tick_params(labelsize=7)
@@ -87,14 +89,20 @@ duration_genres=duration_genre[['genre','duration']]
 #Group subset df by genre and calculate mean duration for all genres. Order by descending mean_duration,i.e. genres with longer movies to shorter.
 mean_dur_gen=duration_genres.groupby(['genre'])['duration'].mean('duration').reset_index(name='mean_duration')
 mean_dur_gen['mean_duration']=round(mean_dur_gen['mean_duration'],2)
-mean_dur_gen=mean_dur_gen.sort_values(by='mean_duration',ascending = False)
+mean_dur_gen=mean_dur_gen.sort_values(by='mean_duration')
 #print(mean_dur_gen)
+
+fig_m=sns.scatterplot(data=movies_duration,x='release_year', y='mean')
+fig_m.set(xlabel="Release year",ylabel="Mean duration (min)")
+fig_m.set(title="Mean movie duration by year of release")
+fig_m.tick_params(labelsize=7)
+plt.show()
 
 #Plot to look for possible relations.
 fig12=sns.barplot(data=mean_dur_gen,x='genre',y='mean_duration',hue='genre')
 fig12.set(xlabel="Genre",ylabel="Mean duration (min)")
 fig12.set(title="Mean movie duration by genre")
-fig12.tick_params(labelsize=8)
+fig12.tick_params(labelsize=8,rotation=40)
 plt.show()
 
 #Plot mean duration vs year of release.
@@ -103,10 +111,3 @@ fig13.set(xlabel="Genre",ylabel="Mean duration (min)")
 fig13.set(title="Mean movie duration by year")
 fig13.tick_params(labelsize=8,rotation=40)
 plt.show()
-
-#heatmap: duration vs decade it was released
-#duration_genres=sns.heatmap()
-
-#Select top ten genres according to mean duration.
-#top_means=mean_dur_gen.iloc[0:10,:]
-#print(top_means)
