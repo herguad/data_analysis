@@ -117,11 +117,6 @@ Once the data was cleaned and properly filtered,the dataset includes observation
 
 ### Has Netflix been expanding the range of nationalities of movies in their library?
 
-Grouping df by country and year added, a general plot shows how overall movies added each year varied in two decades.
-<p align="center">
-<img src="">
-</p>
-
 To analize distribution per continent, a new df was built by matching awoc info with the netflix dataset. A countplot shows that the total number of movies added per contient varies between just and .
 <p align="center">
 <img src="images/sum_continent.png">
