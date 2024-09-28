@@ -24,11 +24,11 @@ movies_country_genre=movies_col_select.loc[:,('country','genre')]
 
 #Group movies by genre and year added, and count genres movies added per year. 
 movies_g_y_sum=movies_genre_year.groupby(["genre","year_added"]).value_counts(ascending=True).reset_index(name='movies_per_genreyear')
-print(movies_g_y_sum)
+#print(movies_g_y_sum)
 
 #Group movies by country and genre, and count genres movies added per country. 
 movies_g_c_sum=movies_country_genre.groupby(["country","genre"]).value_counts(ascending=True).reset_index(name='movies_per_countrygenre')
-print(movies_g_c_sum)
+#print(movies_g_c_sum)
 
 #Count uncategorized movies and remove/display on their own (by country and by year). Add to NaN Movies file.
 #Stats based on years when movies were added
@@ -46,7 +46,7 @@ movies_genre_year=movies_g_y_sum.drop(index=[74, 75, 76, 77, 78, 79,107,108,109,
 
 #Visualize movies_per_genreyear.
 palette=sns.set_palette('bright',n_colors=18)
-fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear',size='movies_per_genreyear',palette=palette,hue='genre',legend=False)
+fig7=sns.scatterplot(movies_genre_year,x='year_added',y='movies_per_genreyear',palette=palette,hue='genre')
 fig7.set(xlabel="Year",ylabel="Total movie count per year")
 fig7.set(title="Movies of different genres added per year")
 fig7.tick_params(labelsize=9)
@@ -101,7 +101,9 @@ genre_year_prop=genre_year_sum.drop(['sum','movies_per_genreyear'],axis=1)
 #print(genre_year_prop)
 #print(len(genre_year_prop['genre'].unique()))
 
-fig10=sns.relplot(genre_year_prop,x='year_added',y='proportion',hue='genre',size='proportion',sizes=(10, 150),palette=sns.set_palette('deep',n_colors=17))
+
+palette=sns.set_palette('deep',n_colors=17)
+fig10=sns.relplot(genre_year_prop,x='year_added',y='proportion',hue='genre',size='proportion',sizes=(15, 225),palette=palette)
 fig10.set(xlabel="Year",ylabel="Proportion of genre relative to all movies added that year")
 plt.ylim(0,50)
 fig10.set(title="Genre representation per year")
@@ -113,6 +115,7 @@ plt.show()
 
 genre_year_prop_f=genre_year_prop[genre_year_prop['proportion'] >= 25].reset_index(drop=True)
 #print(len(genre_year_prop_f['genre'].unique()))
+#print(genre_year_prop_f['year_added'].unique())
 #print(genre_year_prop_f.head())
 
 palette3=sns.set_palette('colorblind',n_colors=17)
@@ -121,7 +124,7 @@ fig11.set(xlabel="Proportion of genre relative to all movies added that year",yl
 fig11.tick_params(labelsize=8)
 plt.show()
 
-#Stats based on countries of origin for mvoies added each year.
+#Stats based on countries of origin for movies added each year.
 uncategorized_c=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']['movies_per_countrygenre'].sum()
 u_ncategorized=movies_g_c_sum[movies_g_c_sum['genre']=='Uncategorized']
 movies_genre_country=movies_g_c_sum.drop(index=[19,51,97,167,192,287,333,349])
@@ -133,12 +136,11 @@ international_movies_c= movies_genre_country[movies_genre_country['genre']=='Int
 movies_genre_country=movies_genre_country.drop(index=[ 16,  22,  35,  45,  55,  63,  77,  84,  95, 106, 116, 132, 152, 166, 170, 173, 190, 199, 212, 224, 234, 241, 246, 259, 268, 275, 285, 300, 307, 318, 327])
 #print(movies_genre_country) --> check n of rows is 31 down.
 
-#Add total movies per country and genre.
+#Add total movies per genre and country and plot.
 tot_per_genre=movies_genre_country.groupby(['genre'])['genre'].value_counts().reset_index(name='count')
 tot_per_genre=tot_per_genre.sort_values(by='count',ascending=False)
 #print(tot_per_genre)
 
-#Visualize genre count by genre for all countries.
 fig4=sns.barplot(tot_per_genre,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=17))
 fig4.set(xlabel="Number of countries",ylabel="Genre")
 plt.show()
@@ -146,8 +148,6 @@ plt.show()
 #Choose only genres with over half the total movies (30). Plot genre distribution by country for those genres.
 pop_genres=tot_per_genre[tot_per_genre['count'] >= 30]
 #print(pop_genres)
-
-#Visualize filtered popular movie genres.
 fig5=sns.barplot(pop_genres,x='count',y='genre', hue='genre',palette=sns.color_palette('colorblind', n_colors=6))
 fig5.set(xlabel="Number of countries",ylabel="Genre")
 plt.show()
@@ -165,7 +165,9 @@ pop_genre_sum=pop_genre_sort.groupby(['genre'])[['movies_per_countrygenre']].sum
 
 fig6=sns.barplot(pop_genre_sum,x='genre',y='movies_per_countrygenre',hue='genre',palette=sns.color_palette('colorblind', n_colors=6))
 fig6.set(xlabel="Most popular genres",ylabel="Total number of movies")
+fig6.set(title="Top 5 genres with max added movies")
+fig6.tick_params(labelsize=8)
 plt.show()
 
-#Find whether there's a correlation between genre and country .
+#Find whether there's a correlation between genre and country . 
 #Find whether there's a correlation between genre and continent . 
