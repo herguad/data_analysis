@@ -132,3 +132,5 @@ To take a closer look at distribution by continent, a boxplot shows that better 
 <img src="images/continent_distrib.png">
 </p>
 
+## 4. Historical analysis
+
