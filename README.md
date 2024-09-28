@@ -136,5 +136,5 @@ To take a closer look at distribution by continent, a boxplot shows that better 
 To analyse how movie duration has changed overtime in more detail, ...
 
 <p align="center">
-<img src="images/dec_dur.png">
+<img src="images/dur_dec.png">
 </p>
