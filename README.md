@@ -58,7 +58,7 @@ d. [distribution per genre](code/movies_distrib_genre.py)
 To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes and over 180, together with the those marked as 'uncategorized' for genre, were filtered out. This dataset was initially visualized as two different scatterplots to get an idea of the distribution of movies duration in general and movies duration by genre.<br />
 
 <p align="center">
-<img src="images/dur_rel_filt.png">
+<img src="images/duration_decade.png">
 </p>
 
 <p align="center">
