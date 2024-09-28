@@ -46,7 +46,7 @@ To get an idea of how much cleaning is needed, I contrasted the length of the df
 Subset the df to only include those variables of interest. Plot the data to look for possible outliers.
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/c4d5e02e-9f12-4a26-af17-f2d42a5c0f5b">
+<img src="images/dur_rel_unfilt.png">
 </p>
 
 Here the analysis splits into ((NUMBER)) files corresponding with the main questions:<br />
