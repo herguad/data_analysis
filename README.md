@@ -117,7 +117,7 @@ Once the data was cleaned and properly filtered,the dataset includes observation
 
 ### Has Netflix been expanding the range of nationalities of movies in their library?
 
-Grouping df by country, a general plot shows how overall movies added each year varied in two decades.
+Grouping df by country and year added, a general plot shows how overall movies added each year varied in two decades.
 <p align="center">
 <img src="">
 </p>
@@ -137,4 +137,3 @@ To take a closer look at distribution by continent, a boxplot shows that better 
 <img src="images/continent_distrib.png">
 </p>
 
-For instance, Europe Asia and South America display outliers affecting counts differntly: either because of the number of outliers (low or high) and how clustered they appear to be.
