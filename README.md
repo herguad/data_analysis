@@ -133,8 +133,8 @@ To take a closer look at distribution by continent, a boxplot shows that better 
 </p>
 
 ## 4. Historical analysis
-A boxplot summarising stats per decade for movies released the past 80 years makes trends in movie duration overtime much clearer.
+A boxenplot summarising stats per decade for movies released the past 80 years makes trends in movie duration overtime much clearer.
 
 <p align="center">
-<img src="images/dur_dec.png">
+<img src="images/dur_dec_en.png">
 </p>
