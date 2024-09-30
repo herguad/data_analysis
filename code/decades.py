@@ -92,7 +92,7 @@ fig.tick_params(labelsize=9)
 plt.show()
 
 palette=sns.color_palette("plasma",n_colors=8)
-fig1=sns.catplot(data=netflix_decades,x='decade', y='duration',hue='decade',palette=palette,kind="box",whis=2.0)
+fig1=sns.catplot(data=netflix_decades,x='decade', y='duration',hue='decade',palette=palette,kind="boxen")
 fig1.set(xlabel="Decade of release",ylabel="Duration (min)")
 fig1.set(title="Movie duration by decade")
 fig1.tick_params(labelsize=9)
