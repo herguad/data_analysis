@@ -138,3 +138,5 @@ A boxenplot summarising stats per decade for movies released the past 80 years m
 <p align="center">
 <img src="images/dur_dec_en.png">
 </p>
+
+Decreasing bars for movies released each decade show
