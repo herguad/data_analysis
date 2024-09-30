@@ -139,4 +139,4 @@ A boxenplot summarising stats per decade for movies released the past 80 years m
 <img src="images/dur_dec_en.png">
 </p>
 
-Decreasing bars for movies released each decade show
+Boxes decreasing in size for Netflix data of movies released each decade show how values for movie duration are spread out so that starting with the centerline (the median) the firt two boxes contain 50% of the data. The next two extending smaller boxes contain 25% and so on. For instance, data for movies released between the 40s and 60s seem to be more evenly distributed than the rest such that almost all of the movies duration in these decades varies between the first 2Qs boundaries (repreented by the boxes horizontal edges).
