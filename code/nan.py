@@ -1,8 +1,5 @@
-# Have more nationalities been included on netflix in time?
-# Importing pandas and matplotlib
 import pandas as pd
 import matplotlib.pyplot as plt
-#import numpy as np
 import seaborn as sns
 
 netflix_df=pd.read_csv('netflix_data.csv')
