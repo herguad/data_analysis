@@ -79,14 +79,14 @@ Moving on with genres in particular, the first cleaning and filtering provides a
 <img src="images/tot_movies_genre.png">
 </p>
 
-Among `seaborn.scatterplot` arguments, both `size` and `hue` were specified to represent the number of movies released each year per genre but the `legend` was set to `False` to avoid cluttering the overview of the data.
+Among `seaborn.scatterplot` arguments, both `size` and `hue` were specified to represent the number of movies added each year per genre but the `legend` was set to `False` to avoid cluttering the overview of the data.
 
 To analyse the popular genres, i.e. to answer the two main questions for genre distribution, I filtered out genres with fewer than 8 movies, i.e. the value for the 2Q as shown with `.describe()`.
 <p align="center">
 <img src="images/genre_describe.png" width=360 length=240>
 </p>
 
-To get an idea of the trends for the different genres by year of release, a barplot provides a good overview esp. with `hue` argument specified for genre. Grouping the filtered df by genre and adding a column with the total sum of movies of each genre every year and then filtering for the max values provide a way to plot the popular genres per year.
+To get an idea of the trends for the different genres by year added, a barplot provides a good overview esp. with `hue` argument specified for genre. Grouping the filtered df by genre and adding a column with the total sum of movies of each genre added every year and then filtering for the max values provide a way to plot the popular genres per year.
 
 <p align="center">
 <img src="images/genres_year.png">
