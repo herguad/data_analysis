@@ -12,7 +12,7 @@ To the original question, I've added the following.
 - Is genre correlated to duration?
 2. Focusing on genre
 - Which genres got the most movies added in different years?
-- Has Netflix been expanding the range of genres for movies in their library?
+- Has Netflix been expanding the range of genres for movies in their catalogue?
 3. Focusing on countries and continents
 - Which countries have the most released movies in different years? And which ones have the least?
 - What can be said about the greater and smaller number of releases per continent?
@@ -20,7 +20,7 @@ To the original question, I've added the following.
 4. 'Historical' analysis
 - How are the different genres distributed in time?
 - Which genres have gained relevance or lost it?
-- Has the distribution of movies changed in relation to continent and countries diversity?
+- Has the distribution of movies changed in relation to continent and country or origin?
 
 Below are the insights derived from observing possible relations between relevant features of the dataset and the tools and methods I used to that aim.
 
