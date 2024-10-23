@@ -42,7 +42,7 @@ A quick look over the shape, basic info and first row of the df show +7 rows inc
 
 ![netflix_df_info](https://github.com/user-attachments/assets/cb591c1c-9f93-48ee-8649-fff3529309da)
 
-To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning. <br /> The complete analysis and validation of data types is [here](code/NaN_movies.py).<br />
+To get an idea of how much cleaning is needed, I contrasted the length of the df with the counts for rows with NaN values, counted unique values for the variables and determined how to approach the cleaning.
 Subset the df to only include those variables of interest. Plot the data to look for possible outliers.
 
 <p align="center">
