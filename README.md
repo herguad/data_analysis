@@ -50,9 +50,9 @@ Subset the df to only include those variables of interest. Plot the data to look
 </p>
 
 Here the analysis splits into ((NUMBER)) files corresponding with the main questions:<br />
-a. [distribution per duration](code/duration_years.py)<br /> 
-b. [distribution per release_year](code/movies_release.py)<br />
-c. [distribution per country and continent](code/movies_distrib_country.py)<br />
+a. [distribution per duration](code/duration.py)<br /> 
+b. [distribution per release_year](code/decades.py)<br />
+c. [distribution per country and continent](code/country.py)<br />
 d. [distribution per genre](code/movies_distrib_genre.py)
 
 To assess questions in 1/a, the df was subset by title, genre, release_year and duration. The movies under 60 minutes and over 180, together with the those marked as 'uncategorized' for genre, were filtered out. This dataset was initially visualized as two different scatterplots to get an idea of the distribution of movies duration in general (gradient-colored scatterplot) and movies duration by genre (scatterplot colored by genre).<br />
