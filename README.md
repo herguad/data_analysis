@@ -49,7 +49,7 @@ Subset the df to only include those variables of interest. Plot the data to look
 <img src="images/dur_rel_unfilt.png">
 </p>
 
-Here the analysis splits into ((NUMBER)) files corresponding with the main questions:<br />
+Here the analysis splits into four files corresponding with the main questions:<br />
 a. [distribution per duration](code/duration.py)<br /> 
 b. [distribution per genre](code/genre.py)<br /> 
 c. [distribution per country and continent](code/country.py)<br />
